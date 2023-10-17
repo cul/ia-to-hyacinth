@@ -1,626 +1,260 @@
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    
-
-
-
-
-
-
-
-
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-<title>Log in - CUL JIRA</title>
-<meta name="application-name" content="JIRA" data-name="jira" data-version="9.4.6"><meta name="ajs-server-scheme" content="https">
-<meta name="ajs-server-port" content="443">
-<meta name="ajs-server-name" content="issues.cul.columbia.edu">
-<meta name="ajs-behind-proxy" content="null">
-<meta name="ajs-base-url" content="https://issues.cul.columbia.edu">
-<meta name="ajs-dev-mode" content="false">
-<meta name="ajs-context-path" content="">
-<meta name="ajs-version-number" content="9.4.6">
-<meta name="ajs-build-number" content="940006">
-<meta name="ajs-is-beta" content="false">
-<meta name="ajs-is-rc" content="false">
-<meta name="ajs-is-snapshot" content="false">
-<meta name="ajs-is-milestone" content="false">
-<meta name="ajs-remote-user" content="">
-<meta name="ajs-remote-user-fullname" content="">
-<meta name="ajs-user-locale" content="en_US">
-<meta name="ajs-user-locale-group-separator" content=",">
-<meta name="ajs-app-title" content="CUL JIRA">
-<meta name="ajs-keyboard-shortcuts-enabled" content="true">
-<meta name="ajs-keyboard-accesskey-modifier" content="Alt">
-<meta name="ajs-enabled-dark-features" content="[&quot;com.atlassian.jira.agile.darkfeature.editable.detailsview&quot;,&quot;nps.survey.inline.dialog&quot;,&quot;com.atlassian.jira.agile.darkfeature.edit.closed.sprint.enabled&quot;,&quot;jira.plugin.devstatus.phasetwo&quot;,&quot;jira.frother.reporter.field&quot;,&quot;atlassian.rest.xsrf.legacy.enabled&quot;,&quot;jira.site.darkfeature.admin&quot;,&quot;jira.issue.status.lozenge&quot;,&quot;com.atlassian.jira.issuetable.draggable.disabled&quot;,&quot;public.access.disabled&quot;,&quot;com.atlassian.jira.projects.issuenavigator&quot;,&quot;com.atlassian.jira.config.PDL&quot;,&quot;jira.plugin.devstatus.phasetwo.enabled&quot;,&quot;atlassian.aui.raphael.disabled&quot;,&quot;jira.user.darkfeature.admin&quot;,&quot;app-switcher.new&quot;,&quot;frother.assignee.field&quot;,&quot;com.atlassian.jira.projects.ProjectCentricNavigation.Switch&quot;,&quot;jira.onboarding.cyoa&quot;,&quot;com.atlassian.jira.agile.darkfeature.kanplan.enabled&quot;,&quot;com.atlassian.jira.config.ProjectConfig.MENU&quot;,&quot;com.atlassian.jira.projects.sidebar.DEFER_RESOURCES&quot;,&quot;com.atlassian.jira.agile.darkfeature.kanplan.epics.and.versions.enabled&quot;,&quot;com.atlassian.jira.agile.darkfeature.sprint.goal.enabled&quot;,&quot;jira.zdu.admin-updates-ui&quot;,&quot;jira.zdu.jmx-monitoring&quot;,&quot;mail.batching.enabled&quot;,&quot;sd.new.settings.sidebar.location.disabled&quot;,&quot;jira.zdu.cluster-upgrade-state&quot;,&quot;com.atlassian.jira.email.templates.readFromJiraHome&quot;,&quot;com.atlassian.jira.agile.darkfeature.splitissue&quot;,&quot;com.atlassian.jira.config.CoreFeatures.LICENSE_ROLES_ENABLED&quot;,&quot;jira.export.csv.enabled&quot;]">
-<meta name="ajs-in-admin-mode" content="false">
-<meta name="ajs-is-sysadmin" content="false">
-<meta name="ajs-is-admin" content="false">
-<meta name="ajs-outgoing-mail-enabled" content="true">
-<meta name="ajs-archiving-enabled" content="false">
-<meta name="ajs-date-relativize" content="false">
-<meta name="ajs-date-time" content="h:mm a">
-<meta name="ajs-date-day" content="EEEE h:mm a">
-<meta name="ajs-date-dmy" content="dd/MMM/yy">
-<meta name="ajs-date-complete" content="dd/MMM/yy h:mm a">
-<meta name="ajs-use-iso8601" content="false">
-<script type="text/javascript">var AJS=AJS||{};AJS.debug=true;</script>
-
-
-    
-<meta id="atlassian-token" name="atlassian-token" content="A74Q-YQ7Y-0TCB-EQES_a12264a13d8b4b5103d2579c30c1f06fcacff1c3_lout">
-
-
-
-<link rel="shortcut icon" href="/s/7coxin/940006/x6o47w/_/images/fav-jsw.png">
-<link rel="search" type="application/opensearchdescription+xml" href="/osd.jsp" title="Log in - CUL JIRA"/>
-
-    
-
-
-
-
-
-
-<!--[if IE]><![endif]-->
-<script type="text/javascript">
-    (function() {
-        var contextPath = '';
-
-        function printDeprecatedMsg() {
-            if (console && console.warn) {
-                console.warn('DEPRECATED JS - contextPath global variable has been deprecated since 7.4.0. Use `wrm/context-path` module instead.');
-            }
-        }
-
-        Object.defineProperty(window, 'contextPath', {
-            get: function() {
-                printDeprecatedMsg();
-                return contextPath;
-            },
-            set: function(value) {
-                printDeprecatedMsg();
-                contextPath = value;
-            }
-        });
-    })();
-
-</script>
-<script data-wrm-key="com.atlassian.plugins.atlassian-plugins-webresource-rest:data-collector-perf-observer,jira.webresources:resource-phase-checkpoint-init" data-wrm-batch-type="resource" data-initially-rendered>
-window.__resourcePhaseCheckpointResolvers={resolveDeferPhaseCheckpoint:null,resolveInteractionPhaseCheckpoint:null},window.performance&&window.performance.mark&&(window.DeferScripts||(window.DeferScripts={}),window.DeferScripts.totalClicks=0,window.DeferScripts.totalKeydowns=0,window.DeferScripts.clickListener=function(){"use strict";window.DeferScripts.totalClicks+=1},window.addEventListener("click",window.DeferScripts.clickListener),window.DeferScripts.keydownListener=function(){"use strict";window.DeferScripts.totalKeydowns+=1},window.addEventListener("keydown",window.DeferScripts.keydownListener)),window.resourcePhaseCheckpoint=Object.freeze({defer:new Promise(function(e){"use strict";window.__resourcePhaseCheckpointResolvers.resolveDeferPhaseCheckpoint=e}),interaction:new Promise(function(e){"use strict";window.__resourcePhaseCheckpointResolvers.resolveInteractionPhaseCheckpoint=e})}),Object.freeze(window.__resourcePhaseCheckpointResolvers);
-!function(){"use strict";if("PerformanceObserver"in window){const e=[];window.__observedResources=e;const r=e=>"script"===e?"script":"css";new PerformanceObserver((n=>{n.getEntries().filter((({initiatorType:e,name:r})=>{const n="script"===e||((e,r)=>"link"===e&&"css"===new URL(r).pathname.split(".").pop())(e,r),i=new URL(location.href).origin===new URL(r).origin;return n&&i})).forEach((({name:n,transferSize:i,encodedBodySize:s,initiatorType:o})=>{e.push([i,s,n,r(o)])}))})).observe({type:"resource"})}}();
-
-</script>
-<script>
-window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
-WRM._unparsedData["jira.core:default-comment-security-level-data.DefaultCommentSecurityLevelHelpLink"]="{\"extraClasses\":\"default-comment-level-help\",\"title\":\"Commenting on an Issue\",\"url\":\"https://docs.atlassian.com/jira/jcore-docs-094/Editing+and+collaborating+on+issues#Editingandcollaboratingonissues-restrictacomment\",\"isLocal\":false}";
-WRM._unparsedData["jira.core:feature-flags-data.feature-flag-data"]="{\"enabled-feature-keys\":[\"com.atlassian.jira.agile.darkfeature.editable.detailsview\",\"nps.survey.inline.dialog\",\"com.atlassian.jira.agile.darkfeature.edit.closed.sprint.enabled\",\"jira.plugin.devstatus.phasetwo\",\"jira.frother.reporter.field\",\"atlassian.rest.xsrf.legacy.enabled\",\"jira.site.darkfeature.admin\",\"jira.issue.status.lozenge\",\"com.atlassian.jira.issuetable.draggable.disabled\",\"public.access.disabled\",\"com.atlassian.jira.projects.issuenavigator\",\"com.atlassian.jira.config.PDL\",\"jira.plugin.devstatus.phasetwo.enabled\",\"atlassian.aui.raphael.disabled\",\"jira.user.darkfeature.admin\",\"app-switcher.new\",\"frother.assignee.field\",\"com.atlassian.jira.projects.ProjectCentricNavigation.Switch\",\"jira.onboarding.cyoa\",\"com.atlassian.jira.agile.darkfeature.kanplan.enabled\",\"com.atlassian.jira.config.ProjectConfig.MENU\",\"com.atlassian.jira.projects.sidebar.DEFER_RESOURCES\",\"com.atlassian.jira.agile.darkfeature.kanplan.epics.and.versions.enabled\",\"com.atlassian.jira.agile.darkfeature.sprint.goal.enabled\",\"jira.zdu.admin-updates-ui\",\"jira.zdu.jmx-monitoring\",\"mail.batching.enabled\",\"sd.new.settings.sidebar.location.disabled\",\"jira.zdu.cluster-upgrade-state\",\"com.atlassian.jira.email.templates.readFromJiraHome\",\"com.atlassian.jira.agile.darkfeature.splitissue\",\"com.atlassian.jira.config.CoreFeatures.LICENSE_ROLES_ENABLED\",\"jira.export.csv.enabled\"],\"feature-flag-states\":{\"com.atlassian.jira.use.same.site.none.for.xsrf.token.cookie\":true,\"com.atlassian.jira.leaked.all.anonymous.access\":true,\"com.atlassian.jira.in.product.diagnostics.extended.logging\":false,\"com.atlassian.jira.agile.darkfeature.handle.ug.usernames\":true,\"com.atlassian.jira.security.endpoint.non.admin.access.screens\":false,\"com.atlassian.jira.mailHandlerImapMessageQueryLegacy\":false,\"com.atlassian.diagnostics.scheduler.monitor\":true,\"com.atlassian.jira.webhookEventsAsyncProcessing\":false,\"com.atlassian.jira.serAllowShareWithNonMember\":true,\"com.atlassian.jira.diagnostics.perflog\":true,\"com.atlassian.jira.dbr\":true,\"com.atlassian.jira.bc.user.search.MeasuringUserPickerSearchService\":false,\"com.atlassian.jira.agile.darkfeature.legacy.epic.picker\":false,\"com.atlassian.jira.issuetable.move.links.hidden\":true,\"com.atlassian.jira.agile.darkfeature.unlink.sprints.on.issue.move\":true,\"jira.renderer.consider.variable.format\":true,\"jira.no.frother.multiuserpicker.field\":false,\"com.atlassian.jira.plugin.issuenavigator.jql.autocomplete.eagerlyLoaded\":false,\"com.atlassian.jira.user.dbIdBasedKeyGenerationStrategy\":true,\"com.atlassian.portfolio.dcBundling\":true,\"com.atlassian.jira.sharedEntityEditRights\":true,\"com.atlassian.jira.security.endpoint.anonymous.access.resolution\":false,\"com.atlassian.jira.agile.darkfeature.sprint.goal\":true,\"com.atlassian.jira.thumbnailsDeferredGeneration\":true,\"jira.cluster.monitoring.show.offline.nodes\":true,\"com.atlassian.jira.commentReactions\":true,\"data.pipeline.feature.jira.issue.links.export\":true,\"com.atlassian.jira.custom.csv.escaper\":true,\"com.atlassian.jira.fixedCommentDeletionNotifications\":true,\"com.atlassian.jira.allThumbnailsDeferred\":false,\"com.atlassian.jira.plugin.issuenavigator.filtersUxImprovment\":true,\"com.atlassian.jira.agile.darkfeature.kanplan.epics.and.versions\":true,\"com.atlassian.jira.jsd.mobile\":true,\"jira.customfields.cleanup.identification\":false,\"data.pipeline.feature.jira.all.exportable.custom.fields\":true,\"com.atlassian.jira.defaultValuesForSystemFields\":true,\"jira.dc.cleanup.cluser.tasks\":true,\"jira.customfields.bulk.delete\":false,\"mail.batching.override.core\":true,\"com.atlassian.jira.issues.archiving.filters\":false,\"jira.users.and.roles.page.in.react\":true,\"jira.security.csp.sandbox\":true,\"com.atlassian.jira.agile.darkfeature.synced.sprints\":false,\"com.atlassian.jira.agile.darkfeature.velocity.chart.ui\":true,\"com.atlassian.jira.returnDefaultAvatarsForBrokenAvatars\":true,\"com.atlassian.jira.agile.darkfeature.sprint.auto.management\":false,\"jira.jql.suggestrecentfields\":false,\"com.atlassian.jira.gdpr.rtbf\":true,\"com.atlassian.jira.security.xsrf.session.token\":true,\"com.atlassian.jira.security.project.admin.revoke.with.application.access\":true,\"com.atlassian.jira.agile.darkfeature.optimistic.transitions\":true,\"com.atlassian.jiranomenclature\":true,\"com.atlassian.jira.security.endpoint.non.admin.access.avatar.system\":false,\"com.atlassian.jira.agile.darkfeature.kanplan\":true,\"com.atlassian.jira.agile.darkfeature.boards.find.on.board\":true,\"com.atlassian.diagnostics.http.monitor\":true,\"com.atlassian.jira.agile.darkfeature.future.sprint.dates\":true,\"jira.customfields.paginated.ui\":true,\"com.atlassian.jira.filtersAndDashboardsShareableWithAllGroupsAndRoles\":true,\"com.atlassian.jira.in.product.diagnostics\":true,\"com.atlassian.jira.agile.darkfeature.edit.closed.sprint\":true,\"jira.create.linked.issue\":true,\"jira.sal.host.connect.accessor.existing.transaction.will.create.transactions\":true,\"com.atlassian.jira.advanced.audit.log\":true,\"jira.quick.search\":true,\"external.links.new.window\":true,\"jira.jql.smartautoselectfirst\":false,\"jira.jql.membersof.ignoreGlobalPermissionsForAnonymous\":false,\"data.pipeline.feature.jira.issue.history.export\":true,\"jira.webactions.request.method.recognition\":true,\"jira.richeditor.bidi.warning\":true,\"com.atlassian.jira.security.endpoint.non.browse.projects.access.fields\":false,\"atlassian.cdn.static.assets\":true,\"com.atlassian.jira.lazyload.activity.tabs\":true,\"mail.batching\":true,\"com.atlassian.jira.safeguards\":true,\"com.atlassian.jira.xml.deserializerAllowlist\":true,\"com.atlassian.jira.privateEntitiesEditable\":true,\"com.atlassian.jira.security.endpoint.anonymous.access.priority\":false,\"jira.priorities.per.project.edit.default\":false,\"com.atlassian.jira.agile.darkfeature.issues.in.epic.details.view\":true,\"com.atlassian.jira.plugin.issuenavigator.anonymousPreventCfData\":false,\"jira.priorities.per.project.jsd\":true,\"com.atlassian.jira.safeguards.email.notifications\":true,\"com.atlassian.jira.agile.darkfeature.rapid.boards.bands\":true,\"com.atlassian.jira.agile.darkfeature.flexible.boards\":true,\"com.atlassian.jira.agile.darkfeature.sprint.picker.allsprints.suggestion\":true,\"com.atlassian.jira.agile.darkfeature.epic.validate.visibility\":true,\"data.pipeline.feature.jira.issue.rank.export\":true,\"data.pipeline.feature.jira.jsm.approvals.export\":true,\"jira.dc.lock.leasing\":true,\"com.atlassian.jira.accessibility.personal.settings\":true,\"mail.batching.create.section.cf\":true,\"com.atlassian.jira.send.email.notifications.to.user.without.application.access\":false,\"com.atlassian.jira.security.endpoint.non.browse.projects.access.autocompletedata\":false,\"com.atlassian.mail.server.managers.hostname.verification\":true,\"com.atlassian.advancedroadmaps.rebrand\":true,\"com.atlassian.diagnostics.monitors\":true,\"com.atlassian.jira.upgrade.startup.fix.index\":true,\"com.atlassian.jira.security.endpoint.anonymous.access.projectCategory\":false,\"jira.redirect.anonymous.404.errors\":true,\"com.atlassian.jira.issuetable.draggable\":false,\"data.pipeline.feature.jira.jsm.canned.responses.export\":true,\"com.atlassian.diagnostics.operating.system.monitor\":false,\"com.atlassian.jira.attachments.generate.unique.suffix\":true,\"com.atlassian.jira.agile.darkfeature.kanban.hide.old.done.issues\":true,\"jira.version.based.node.reindex.service\":true,\"com.atlassian.jira.agile.darkfeature.backlog.showmore\":true,\"com.atlassian.diagnostics.database.monitor\":true,\"com.atlassian.jira.agile.darkfeature.sprint.plan\":false,\"com.atlassian.diagnostics.garbage.collection.monitor\":true,\"com.atlassian.jira.security.endpoint.anonymous.access.issueLinkType\":false,\"jira.jql.membersof.ignoreGlobalPermissionsForLoggedUsers\":false,\"com.atlassian.jira.safeguards.work.in.progress\":false,\"com.atlassian.jira.commentStickyFooter\":false,\"com.atlassian.jira.security.LegacyJiraTypeResolver.WARN_ONLY\":false,\"data.pipeline.feature.jira.schema.version.2\":true,\"com.atlassian.jira.agile.darkfeature.burnupchart\":true,\"com.atlassian.jira.issues.archiving.browse\":true,\"com.atlassian.jira.agile.darkfeature.velocity.sprint.picker\":false,\"jira.instrumentation.laas\":false,\"com.atlassian.jira.security.ChartUtils.browse.projects.permission.check\":false,\"data.pipeline.feature.jira.jsm.kb.stats.events.export\":true,\"mail.batching.user.notification\":true,\"com.atlassian.diagnostics.jql.monitor\":true,\"com.atlassian.portfolio.permission.check.for.permissions\":true,\"com.atlassian.jira.agile.darkfeature.dataonpageload\":true,\"jira.webactions.request.method.dependent.xsrf.checks\":true,\"data.pipeline.feature.jira.archived.issue.export\":false,\"com.atlassian.jira.projects.per.project.permission.query\":true,\"com.atlassian.jira.issues.archiving\":true,\"jira.priorities.per.project\":true,\"index.use.snappy\":true}}";
-WRM._unparsedData["jira.core:terminology-data.terminology"]="{\"terminologyEntries\":[{\"originalName\":\"sprint\",\"originalNamePlural\":\"sprints\",\"newName\":\"sprint\",\"newNamePlural\":\"sprints\",\"isDefault\":true},{\"originalName\":\"epic\",\"originalNamePlural\":\"epics\",\"newName\":\"epic\",\"newNamePlural\":\"epics\",\"isDefault\":true}],\"isTerminologyActive\":false}";
-WRM._unparsedData["com.atlassian.plugins.helptips.jira-help-tips:help-tip-manager.JiraHelpTipData"]="{\"anonymous\":true}";
-WRM._unparsedData["jira.core:avatar-picker-data.data"]="{}";
-WRM._unparsedData["jira.request.correlation-id"]="\"48ddc3152ef9dc\"";
-WRM._unparsedData["com.atlassian.analytics.analytics-client:programmatic-analytics-init.programmatic-analytics-data-provider"]="false";
-WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\"\"";
-WRM._unparsedData["com.atlassian.analytics.analytics-client:policy-update-init.policy-update-data-provider"]="false";
-WRM._unparsedData["com.atlassian.jira.jira-header-plugin:newsletter-signup-tip-init.newsletterSignup"]="{\"signupDescription\":\"Get updates, inspiration and best practices from the team behind Jira.\",\"formUrl\":\"https://www.atlassian.com/apis/exact-target/{0}/subscribe?mailingListId=1401671\",\"signupTitle\":\"Sign up!\",\"signupId\":\"newsletter-signup-tip\",\"showNewsletterTip\":false}";
-WRM._unparsedData["jira.core:dateFormatProvider.allFormats"]="{\"dateFormats\":{\"meridiem\":[\"AM\",\"PM\"],\"eras\":[\"BC\",\"AD\"],\"months\":[\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"monthsShort\":[\"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sep\",\"Oct\",\"Nov\",\"Dec\"],\"weekdaysShort\":[\"Sun\",\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\"],\"weekdays\":[\"Sunday\",\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\",\"Saturday\"]},\"lookAndFeelFormats\":{\"relativize\":\"false\",\"time\":\"h:mm a\",\"day\":\"EEEE h:mm a\",\"dmy\":\"dd/MMM/yy\",\"complete\":\"dd/MMM/yy h:mm a\"}}";
-WRM._unparsedData["com.atlassian.jira.jira-header-plugin:dismissedFlags.flags"]="{\"dismissed\":[]}";
-WRM._unparsedData["com.atlassian.jira.project-templates-plugin:project-templates-plugin-resources.ptAnalyticsData"]="{\"instanceCreatedDate\":\"2010-06-11\"}";
-WRM._unparsedData["jira.core:user-message-flags-data.adminLockout"]="{}";
-if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
-<link rel="stylesheet" href="/s/8d94d74618ee0986bfe1ed09c14925c7-CDN/7coxin/940006/x6o47w/cd47ce36c6ecad494aa0de3a62e8b0f1/_/download/contextbatch/css/_super,-com.atlassian.plugins.atlassian-plugins-webresource-rest:data-collector-perf-observer,-jira.webresources:resource-phase-checkpoint-init/batch.css" data-wrm-key="_super,-com.atlassian.plugins.atlassian-plugins-webresource-rest:data-collector-perf-observer,-jira.webresources:resource-phase-checkpoint-init" data-wrm-batch-type="context" media="all">
-<link rel="stylesheet" href="/s/deac47512519d0c7ddebf476846cfe1b-CDN/7coxin/940006/x6o47w/39bde9e96d0b2fe453622d2c9513d5a5/_/download/contextbatch/css/atl.general,jira.global,jira.general,-_super/batch.css?agile_global_admin_condition=true&amp;jag=true" data-wrm-key="atl.general,jira.global,jira.general,-_super" data-wrm-batch-type="context" media="all">
-<link rel="stylesheet" href="/s/e72b7203ee085d342c309b814e12cee6-CDN/7coxin/940006/x6o47w/92687af5d205e4ec3149b0c7f8e96f65/_/download/contextbatch/css/jira.login,-_super/batch.css" data-wrm-key="jira.login,-_super" data-wrm-batch-type="context" media="all">
-<link rel="stylesheet" href="/s/72f0afc23a296abd9c9a2a76760fe5bb-CDN/7coxin/940006/x6o47w/a6297aeb1aa5a2c2bf348dbccee4757d/_/download/contextbatch/css/jira.global.look-and-feel,-_super/batch.css" data-wrm-key="jira.global.look-and-feel,-_super" data-wrm-batch-type="context" media="all">
-<link rel="stylesheet" href="/s/e72b7203ee085d342c309b814e12cee6-CDN/7coxin/940006/x6o47w/1.0/_/download/batch/jira.webresources:captcha/jira.webresources:captcha.css" data-wrm-key="jira.webresources:captcha" data-wrm-batch-type="resource" media="all">
-<script src="/s/21ee24ae7b15f8b9b11a41d74b7e6ed6-CDN/7coxin/940006/x6o47w/cd47ce36c6ecad494aa0de3a62e8b0f1/_/download/contextbatch/js/_super,-com.atlassian.plugins.atlassian-plugins-webresource-rest:data-collector-perf-observer,-jira.webresources:resource-phase-checkpoint-init/batch.js?locale=en-US" data-wrm-key="_super,-com.atlassian.plugins.atlassian-plugins-webresource-rest:data-collector-perf-observer,-jira.webresources:resource-phase-checkpoint-init" data-wrm-batch-type="context" data-initially-rendered></script>
-<script src="/s/5668a3e715c33d404fced7490ecec810-CDN/7coxin/940006/x6o47w/39bde9e96d0b2fe453622d2c9513d5a5/_/download/contextbatch/js/atl.general,jira.global,jira.general,-_super/batch.js?agile_global_admin_condition=true&amp;jag=true&amp;locale=en-US" data-wrm-key="atl.general,jira.global,jira.general,-_super" data-wrm-batch-type="context" data-initially-rendered></script>
-<script src="/s/d7a7fa2714f0cfcaa2430f2d476b2a8c-CDN/7coxin/940006/x6o47w/b541b326911082bd0a5d737785a9f5ae/_/download/contextbatch/js/atl.global,-_super/batch.js?locale=en-US" data-wrm-key="atl.global,-_super" data-wrm-batch-type="context" data-initially-rendered></script>
-<script src="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/7coxin/940006/x6o47w/1.0/_/download/batch/jira.webresources:captcha/jira.webresources:captcha.js" data-wrm-key="jira.webresources:captcha" data-wrm-batch-type="resource" data-initially-rendered></script>
-<script type="module">WRM.requireLazily(["wr!com.atlassian.plugins.atlassian-plugins-webresource-rest:data-collector-async"])</script>
-
-    
-
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-	
-    <meta name="decorator" content="login" />
-
-</head>
-<body id="jira" class="aui-layout aui-theme-default page-type-login   " data-version="9.4.6">
-    <div id="page">
-        
-            <header id="header" role="banner">
-                
-
-
-
-
-
-
-
-
-
-                
-
-
-
-
-                
-
-
-
-
-<a class="aui-skip-link" href="/login.jsp?os_destination=%2Fsecure%2Fattachment%2F79935%2FMuslimWorldManuscripts.csv">Log in</a><a class="aui-skip-link" href="#main">Skip to main content</a><a class="aui-skip-link" href="#sidebar">Skip to sidebar</a><nav class="aui-header aui-dropdown2-trigger-group" aria-label="Site"><div class="aui-header-inner"><div class="aui-header-before"><button class=" aui-dropdown2-trigger app-switcher-trigger aui-dropdown2-trigger-arrowless" aria-controls="app-switcher" aria-haspopup="true" role="button" data-aui-trigger href="#app-switcher"><span class="aui-icon aui-icon-small aui-iconfont-appswitcher">Linked Applications</span></button><div id="app-switcher" class="aui-dropdown2 aui-style-default" role="menu" hidden data-is-user-admin="false" data-is-switcher="true"><div class="app-switcher-loading">Loading&hellip;</div></div></div><div class="aui-header-primary"><span id="logo" class="aui-header-logo aui-header-logo-custom"><a href="https://issues.cul.columbia.edu/secure/MyJiraHome.jspa" aria-label="Go to home page"><img src="/s/7coxin/940006/x6o47w/_/jira-logo-scaled.png" alt="CUL JIRA" /></a></span><ul class='aui-nav'><li><a href="/secure/Dashboard.jspa" class=" aui-nav-link aui-dropdown2-trigger jira-dropdown2-ajax" id="home_link" aria-haspopup="true" aria-controls="home_link-content" title="View and manage your dashboards" accesskey="d" elementtiming="app-header" data-aui-extra-classes>Dashboards</a><div class="aui-dropdown2 aui-style-default" id="home_link-content" data-aui-dropdown2-ajax-key="home_link"></div></li><script>performance.mark("app-header");</script>
-</ul></div><div class="aui-header-secondary"><ul class='aui-nav'>
-<li id="quicksearch-menu">
-    <form action="/secure/QuickSearch.jspa" method="get" id="quicksearch" class="aui-quicksearch dont-default-focus ajs-dirty-warning-exempt" role="search">
-        <input id="quickSearchInput" autocomplete="off"  class="search" type="text" title="Search" placeholder="Search" name="searchString" accessKey="q" />
-        <input type="submit" class="hidden" value="Search">
-    </form>
-</li>
-<li><a class="jira-feedback-plugin" role="button" aria-haspopup="true" id="jira-header-feedback-link" href="#"><span class="aui-icon aui-icon-small aui-iconfont-feedback">Give feedback to Atlassian</span></a></li>
-
-
-
-
-    <li id="system-help-menu">
-        <a class="aui-nav-link aui-dropdown2-trigger aui-dropdown2-trigger-arrowless" id="help_menu" aria-haspopup="true" aria-owns="system-help-menu-content" href="https://docs.atlassian.com/jira/jcore-docs-094/"  target="_blank" rel="noopener noreferrer"  title="Help"><span class="aui-icon aui-icon-small aui-iconfont-question-filled">Help</span></a>
-        <div id="system-help-menu-content" class="aui-dropdown2 aui-style-default">
-                            <div class="aui-dropdown2-section">
-                                                                <ul id="jira-help" class="aui-list-truncate">
-                                                            <li>
-                                    <a id="view_core_help" class="aui-nav-link " title="Go to the online documentation for Jira Core" href="https://docs.atlassian.com/jira/jcore-docs-094/"  target="_blank" >Jira Core help</a>
-                                </li>
-                                                            <li>
-                                    <a id="keyshortscuthelp" class="aui-nav-link " title="Get more information about Jira's Keyboard Shortcuts" href="/secure/ViewKeyboardShortcuts!default.jspa"  target="_blank" >Keyboard Shortcuts</a>
-                                </li>
-                                                            <li>
-                                    <a id="view_about" class="aui-nav-link " title="Get more information about Jira" href="/secure/AboutPage.jspa" >About Jira</a>
-                                </li>
-                                                            <li>
-                                    <a id="view_credits" class="aui-nav-link " title="See who did what" href="/secure/credits/AroundTheWorld!default.jspa"  target="_blank" >Jira Credits</a>
-                                </li>
-                                                    </ul>
-                                    </div>
-                    </div>
-    </li>
-
-
-
-
-
-
-
-
-
-<li id="user-options">
-            <a class="aui-nav-link login-link" href="/login.jsp?os_destination=%2Fsecure%2Fattachment%2F79935%2FMuslimWorldManuscripts.csv">Log In</a>
-                <div id="user-options-content" class="aui-dropdown2 aui-style-default">
-                            <div class="aui-dropdown2-section">
-                                                        </div>
-                    </div>
-    </li>
-</ul></div></div><!-- .aui-header-inner--><aui-header-end></aui-header-end></nav><!-- .aui-header -->
-            </header>
-        
-        
-
-
-
-        <div id="content">
-            <div class="aui-page-panel" ><div class="aui-page-panel-inner">
-                    <main role="main" id="main" class="aui-page-panel-content" >
-                            
-    
-        <header class="aui-page-header"><div class="aui-page-header-inner"><div class="aui-page-header-main">
-                
-                    <h1>Welcome to CUL JIRA</h1>
-                
-            </div></div></header>
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<form action="/login.jsp"
-      class="aui"
-      
-      id="login-form"
-      
-      
-      method="post">
-    <div class="form-body">
-        
-        
-        
-        
-        
-    
-    
-    
-    
-    
-
-    
-        
-                
-                
-        
-    
-
-    
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-<div class="aui-message aui-message-warning">
-        
-
-        
-        
-        
-            <p>You must log in to access this page.</p>
-        
-
-        
-            <p>
-                If you think you shouldn't get this message, please contact your Jira administrators.
-            </p>
-        
-        </div>
-
-
-
-
-
-
-
-
-    
-
-    
-    <div class="aui-group jira-login-method">
-        <div class="aui-item jira-login-item">
-        
-                
-
-
-
-
-<div class="field-group">
-    
-                    <label accesskey="u" for="login-form-username"><u>U</u>sername</label>
-                    <input class="text medium-field" id="login-form-username" name="os_username" type="text" aria-describedby="login-form-error" value="" />
-                
-    
-</div>
-
-                
-
-
-
-
-<div class="field-group">
-    
-                    <label accesskey="p" for="login-form-password" id="passwordlabel"><u>P</u>assword</label>
-                    <input id="login-form-password" class="text medium-field" name="os_password" type="password" />
-                
-    
-</div>
-
-                
-                
-                    
-
-
-
-
-<fieldset class="group ">
-    
-    
-                        
-                        
-
-
-
-
-<div class="checkbox">
-    
-                            
-                            <input class="checkbox" id="login-form-remember-me" name="os_cookie" type="checkbox" value="true" />
-                            <label for="login-form-remember-me" accesskey="r"><u>R</u>emember my login on this computer</label>
-                        
-    
-</div>
-                    
-</fieldset> <!-- // .group -->
-                
-                
-            
-
-        
-        
-            <div id="sign-up-hint" class="field-group">
-                
-                Not a member? To request an account, please contact your Jira administrators.
-                
-            </div>
-        
-        </div>
-    </div>
-    
-
-
-<div class="hidden"
-     
-            
-     
-    >
-    <input
-        
-            
-        
-        
-            name="os_destination"
-        
-        type="hidden"
-        
-            value="/secure/attachment/79935/MuslimWorldManuscripts.csv"
-            
-        
-        
-            
-        
-    />
-</div>
-
-    
-    
-
-
-<div class="hidden"
-     
-            
-     
-    >
-    <input
-        
-            
-        
-        
-            name="user_role"
-        
-        type="hidden"
-        
-            
-            
-        
-        
-            
-        
-    />
-</div>
-
-
-        
-        
-
-
-<div class="hidden"
-     
-            
-     
-    >
-    <input
-        
-            
-        
-        
-            name="atl_token"
-        
-        type="hidden"
-        
-            
-            
-        
-        
-            
-        
-    />
-</div>
-
-    </div>
-    
-    <div class="buttons-container form-footer">
-        <div class="buttons">
-            
-                
-
-
-
-
-<input
-    
-        accesskey="s"
-    
-    
-        class="aui-button aui-button-primary"
-        
-    
-    
-    
-        id="login-form-submit"
-    
-    
-    name="login"
-    title="Press Alt+s to submit this form"
-    type="submit"
-    
-        value="Log In"
-        
-    
-    />
-
-            
-            
-                
-
-
-<a
-    
-    accesskey="`"
-    
-    
-        
-        class="aui-button aui-button-link cancel"
-    
-    href="/secure/ForgotLoginDetails.jspa"
-    id="login-form-cancel"
-    title="Press Alt+` to cancel"
->Can&#39;t access your account?</a>
-            
-        </div>
-        
-    </div>
-    
-</form> <!-- // .aui #login-form -->
-
-
-
-
-                        </main>
-                </div></div>
-        </div>
-        
-            <footer id="footer" role="contentinfo">
-                
-                
-
-<section class="footer-body">
-<ul class="atlassian-footer">
-    <li>
-        Atlassian Jira <a class="seo-link" rel="nofollow" href="https://www.atlassian.com/software/jira">Project Management Software</a>
-            </li>
-    <li>
-        <a id="about-link" rel="nofollow" href="/secure/AboutPage.jspa/secure/AboutPage.jspa">About Jira</a>
-    </li>
-    <li>
-        <a id="footer-report-problem-link" rel="nofollow" href="/secure/CreateIssue!default.jspa">Report a problem</a>
-    </li>
-</ul>
-    <p class="atlassian-footer">
-        <span class="licensemessage">
-            
-        </span>
-    </p>
-
-    <div id="footer-logo"><a rel="nofollow" href="http://www.atlassian.com/">Atlassian</a></div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-<fieldset class="hidden parameters">
-    <input type="hidden" title="loggedInUser" value="">
-    <input type="hidden" title="ajaxTimeout" value="The call to the Jira server did not complete within the timeout period.  We are unsure of the result of this operation.">
-    <input type="hidden" title="JiraVersion" value="9.4.6" />
-    <input type="hidden" title="ajaxUnauthorised" value="You are not authorized to perform this operation.  Please log in.">
-    <input type="hidden" title="baseURL" value="https://issues.cul.columbia.edu" />
-    <input type="hidden" title="ajaxCommsError" value="The Jira server could not be contacted. This may be a temporary glitch or the server may be down. ">
-    <input type="hidden" title="ajaxServerError" value="The Jira server was contacted but has returned an error response. We are unsure of the result of this operation.">
-    <input type="hidden" title="ajaxErrorCloseDialog" value="Close this dialog and press refresh in your browser">
-    <input type="hidden" title="ajaxErrorDialogHeading" value="Communications Breakdown">
-
-    <input type="hidden" title="dirtyMessage" value="You have entered new data on this page. If you navigate away from this page without first saving your data, the changes will be lost.">
-    <input type="hidden" title="dirtyDialogMessage" value="You have entered new data in this dialog. If you navigate away from this dialog without first saving your data, the changes will be lost. Click cancel to return to the dialog.">
-    <input type="hidden" title="keyType" value="Type">
-    <input type="hidden" title="keyThen" value="then">
-    <input type="hidden" title="dblClickToExpand" value="Double click to expand">
-    <input type="hidden" title="actions" value="Actions">
-    <input type="hidden" title="removeItem" value="Remove">
-    <input type="hidden" title="workflow" value="Workflow">
-    <input type="hidden" title="labelNew" value="New Label">
-    <input type="hidden" title="issueActionsHint" value="Begin typing for available operations or press down to see all">
-    <input type="hidden" title="closelink" value="Close">
-    <input type="hidden" title="dotOperations" value="Operations">
-    <input type="hidden" title="dotLoading" value="Loading...">
-    <input type="hidden" title="frotherSuggestions" value="Suggestions">
-    <input type="hidden" title="frotherNomatches" value="No Matches">
-    <input type="hidden" title="multiselectVersionsError" value="{0} is not a valid version.">
-    <input type="hidden" title="multiselectComponentsError" value="{0} is not a valid component.">
-    <input type="hidden" title="multiselectGenericError" value="The value {0} is invalid.">
-</fieldset>
-
-            </footer>
-        
-    </div>
-    
-
-<script>
-window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
-WRM._unparsedData["keyboardShortcutsUrl"]="\"/rest/api/1.0/shortcuts/940006/d4004554c1b8454b74e31390b7c833d4/shortcuts\"";
-if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
-<script src="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/7coxin/940006/x6o47w/9c10c8a3d20c751f96a47d5566e02c11/_/download/contextbatch/js/jira.webresources:resource-phase-checkpoint-hit,-_super/batch.js" data-wrm-key="jira.webresources:resource-phase-checkpoint-hit,-_super" data-wrm-batch-type="context" data-initially-rendered defer></script>
-
-
-</body>
-</html>
+contributor,creator,date,identifier,language,title
+Columbia University Libraries,,1650-01-01T00:00:00Z,ldpd_14734628_000,per,[Persian calligraphy and illustration album]
+Columbia University Libraries,,1797-01-01T00:00:00Z,ldpd_14678094_000,ara,[Collection of Sufi writings and prayers]
+Columbia University Libraries,,1875-01-01T00:00:00Z,ldpd_14734314_000,ara,[Wooden writing tablet for teaching grammar and religion]
+Columbia University Libraries,,1700-01-01T00:00:00Z,ldpd_13604628_000,ara,[Qurʼān selections and prayers]
+Columbia University Libraries,,1813-01-01T00:00:00Z,ldpd_13892499_000,ara,[On charms and talismans]
+Columbia University Libraries,,1800-01-01T00:00:00Z,ldpd_14649865_000,ara,[Questions and answers on Christianity]
+Columbia University Libraries,,1748-01-01T00:00:00Z,ldpd_14734567_000,per,[Collection of Persian poetry and stories]
+Columbia University Libraries,,1619-01-01T00:00:00Z,ldpd_15265612_000,per,[Three treatises on astronomy and arithmetic]
+Columbia University Libraries,,1724-01-01T00:00:00Z,ldpd_15147190_000,ara,[Collection of treatises on Sufism and Islam]
+Columbia University Libraries,,1700-01-01T00:00:00Z,ldpd_13893159_000,ara,[Collection of prayers and selections from the Qurʼān]
+Columbia University Libraries,,1694-01-01T00:00:00Z,ldpd_14294920_000,ara,[Collection of works on astronomy and astronomical instruments]
+Columbia University Libraries,,1800-01-01T00:00:00Z,ldpd_15147176_000,cop,[Selections from the New Testament and Psalms in Coptic]
+Columbia University Libraries,"Baháʼuʼlláh, 1817-1892",1872-01-01T00:00:00Z,ldpd_15311698_000,ara,[Selections from al-Kalimāt al-maknūnah and the complete Kitāb al-Īqān]
+Columbia University Libraries,,1700-01-01T00:00:00Z,ldpd_14230896_000,ara,Dhakhīrat al-Iskandar al-Malik ibn Fīliqs Dhī al-Qarnayn
+Columbia University Libraries,,1650-01-01T00:00:00Z,ldpd_13604176_000,per,Risālah bar usṭurlāb
+Columbia University Libraries,"Manesca, John, approximately 1780-1838",1846-01-01T00:00:00Z,ldpd_15311695_000,per,Translation from the French into Persian of Jean Manesca's Six Courses of French Lessons : from Vol. I of 1834 and Vol. 2 of 1835
+Columbia University Libraries,"Kafʻamī, Ibrāhīm ibn ʻAlī, 1436 or 1437-1499 or 1500",1725-01-01T00:00:00Z,ldpd_13892968_000,ara,Junnat al-amān al-wāqiyah wa-junnat al-īmān al-bāqiyah
+Columbia University Libraries,,1800-01-01T00:00:00Z,ldpd_14677750_000,ara,[Arabic poem with painting]
+Columbia University Libraries,"Ibn Nāṣir al-Darʻī, Aḥmad ibn Muḥammad, 1647-1717",1750-01-01T00:00:00Z,ldpd_15467905_000,ara,[Riḥlat sayyid al-ṭarīqah wa-qaʻdat al-Sharīʻah wa-al-Ḥaqīqah]
+Columbia University Libraries,,1750-01-01T00:00:00Z,ldpd_13892614_000,ara,al-Niṣf al-thānī min juzʼ aḥad ʻashar
+Columbia University Libraries,,1849-01-01T00:00:00Z,ldpd_15265576_000,ara,[Collection of prayers]
+Columbia University Libraries,,1750-01-01T00:00:00Z,ldpd_14642785_000,ara,[Kitāb fī masāʼil fiqhīyah]
+Columbia University Libraries,,1600-01-01T00:00:00Z,ldpd_15264323_000,ara,[Kitāb al-adʻiyah]
+Columbia University Libraries,"Niẓāmī Ganjavī, 1140 or 1141-1202 or 1203",1600-01-01T00:00:00Z,ldpd_14734657_000,per,[Khamsah]
+Columbia University Libraries,,1700-01-01T00:00:00Z,ldpd_15265583_000,ara,[Devotional book]
+Columbia University Libraries,,1700-01-01T00:00:00Z,ldpd_14734596_000,per,Sharḥ-i Ḥāfiẓ
+Columbia University Libraries,,1702-01-01T00:00:00Z,ldpd_14230681_000,ara,al-Ṣaḥīfah al-kāmilah
+Columbia University Libraries,"Maḥallāwī, Muḥammad al-Miṣrī",1700-01-01T00:00:00Z,ldpd_14649877_000,ara,[Prayer in the form of praise of the Prophet]
+Columbia University Libraries,,1830-01-01T00:00:00Z,ldpd_15467919_000,ara,al-Mulāḥaẓah al-intiqādiyah fī al-sīrah al-Muḥammadīyah
+Columbia University Libraries,,1700-01-01T00:00:00Z,ldpd_14649885_000,ota,[İlmihâl]
+Columbia University Libraries,"Majlisī, Muḥammad Bāqir ibn Muḥammad Taqī, 1627 or 1628-approximately 1699",1800-01-01T00:00:00Z,ldpd_15265586_000,per,Zād al-maʻād
+Columbia University Libraries,"Juvayrī, Muḥammad, active 10th century",1574-01-01T00:00:00Z,ldpd_14734720_000,per,Hādhā kitāb qiṣaṣ al-anbiyāʼ
+Columbia University Libraries,,1725-01-01T00:00:00Z,ldpd_13893002_000,ara,[Collection of prayers]
+Columbia University Libraries,,1800-01-01T00:00:00Z,ldpd_14642702_000,ara,Hādhā ḥijāb ʻaẓīm al-shaʼn wa-al-burhān
+Columbia University Libraries,,1700-01-01T00:00:00Z,ldpd_14642793_000,ara,[Devotional book]
+Columbia University Libraries,,1700-01-01T00:00:00Z,ldpd_15467920_000,ota,[Șerh-i Hizbü'n-Nevevî]
+Columbia University Libraries,"Narḫīzāde, Muḥammed Muṣīb, active 1720",1720-01-01T00:00:00Z,ldpd_14642684_000,ota,Tuḥfat al-ʻirfān
+Columbia University Libraries,"Jazūlī, Muḥammad ibn Sulaymān, -1465",1800-01-01T00:00:00Z,ldpd_13604678_000,ara,[Dalāʼil al-khayrāt]
+Columbia University Libraries,"Jazūlī, Muḥammad ibn Sulaymān, 1404-1465",1870-01-01T00:00:00Z,ldpd_14642796_000,ara,Rubʻ min Dalāʼil al-khayrāt
+Columbia University Libraries,"Jazūlī, Muḥammad ibn Sulaymān, 1404-1465",1650-01-01T00:00:00Z,ldpd_14230684_000,ara,Dalāʼil al-khayrāt wa-shawāriq al-anwār fī dhikr al-ṣalāh ʻalá al-nabī al-mukhtār ..
+Columbia University Libraries,,1700-01-01T00:00:00Z,ldpd_14230585_000,ara,[Devotional book]
+Columbia University Libraries,"Jazūlī, Muḥammad ibn Sulaymān, 1404-1465",1836-01-01T00:00:00Z,ldpd_14649887_000,ara,Dalāʼil al-khayrāt wa-shawāriq al-anwār fī dhikr al-ṣalāh ʻalá al-Nabī al-mukhtār
+Columbia University Libraries,,1800-01-01T00:00:00Z,ldpd_14642712_000,per,[Two Persian miniatures]
+Columbia University Libraries,,1750-01-01T00:00:00Z,ldpd_14230567_000,ara,Ziyārat-i ʻĀshūrāʼ
+Columbia University Libraries,"ʻIyāḍ ibn Mūsá, 1083-1149",1785-01-01T00:00:00Z,ldpd_15264393_000,ara,al-Shifāʼ al-sharīf
+Columbia University Libraries,,1680-01-01T00:00:00Z,ldpd_14230574_000,ara,al-Qurʼān
+Columbia University Libraries,,1757-01-01T00:00:00Z,ldpd_14230569_000,ara,[Devotional book]
+Columbia University Libraries,"Āz̲ar Baygdilī, Luṭf ʻAlī ibn Āqā Khān, 1721 or 1722-1780 or 1781",1800-01-01T00:00:00Z,ldpd_15147178_000,per,Ātishkadah
+Columbia University Libraries,"Maḥallī, Jalāl al-Dīn Muḥammad ibn Aḥmad, 1389-1459",1400-01-01T00:00:00Z,ldpd_14642703_000,ara,[Badr al-ṭāliʻ fī ḥall Jamʻ al-jawāmiʻ]
+Columbia University Libraries,,1716-01-01T00:00:00Z,ldpd_14649870_000,ara,[Devotional book]
+Columbia University Libraries,"Hilālī, Aḥmad ibn ʻAbd al-ʻAzīz, 1701-1761",1881-01-01T00:00:00Z,ldpd_14642101_000,ara,Fatḥ al-quddūs fī sharḥ khuṭbat al-Qāmūs
+Columbia University Libraries,"Jazūlī, Muḥammad ibn Sulaymān, 1404-1465",1835-01-01T00:00:00Z,ldpd_14230691_000,ara,Dalāʼil al-khayrāt wa shawāriq al-anwār fī dhikr al-ṣalāh ʻalá al-nabī al-mukhtār
+Columbia University Libraries,"Lāhūrī, Imām al-Dīn ibn Luṭf Allāh",1800-01-01T00:00:00Z,ldpd_15311689_000,ara,Taṣrīḥ fī sharḥ Tashrīḥ al-aflāk
+Columbia University Libraries,,1830-01-01T00:00:00Z,ldpd_15467906_000,ara,[Fragment of an Arabic grammar]
+Columbia University Libraries,,1797-01-01T00:00:00Z,ldpd_15311693_000,ara,Zīj
+Columbia University Libraries,"Abū al-Fatḥ ibn Abī al-Ḥasan, al-Sāmirī, active 1355",1750-01-01T00:00:00Z,ldpd_15467904_000,ara,[Kitāb al-tārīkh mimmā taqaddama ʻan al-ābāʼ]
+Columbia University Libraries,"Ibn al-Wāsiṭī, Shihāb al-Dīn Ghāzī ibn Aḥmad, -1312",1758-01-01T00:00:00Z,ldpd_17022528_000,ara,Hādhā al-kitāb Radd ʻalá ahl al-dhimmah wa-man tabaʻahum
+Columbia University Libraries,"Niẓāmī Ganjavī, 1140 or 1141-1202 or 1203",1500-01-01T00:00:00Z,ldpd_14678257_000,per,[Leaf from Khusraw va Shīrīn]
+Columbia University Libraries,"Baháʼuʼlláh, 1817-1892",1874-01-01T00:00:00Z,ldpd_15311697_000,ara,[Kitāb-i aqdas]
+Columbia University Libraries,"Qāz̤ī Muḥammad Aʻlá, active 1767",1800-01-01T00:00:00Z,ldpd_14642103_000,per,Masāyil-i jabr va muqābalah
+Columbia University Libraries,"Ibn Ghāzī, Muḥammad ibn Aḥmad, 1437 or 1438-1513",1799-01-01T00:00:00Z,ldpd_14294929_000,ara,al-Qurʼān
+Columbia University Libraries,,1674-01-01T00:00:00Z,ldpd_13604651_000,ara,al-Juzʼ al-thāmin ʻashar
+Columbia University Libraries,,1650-01-01T00:00:00Z,ldpd_13892589_000,ara,[Qur'ān leaf]
+Columbia University Libraries,,1500-01-01T00:00:00Z,ldpd_13892580_000,ara,[al-Qurʼān]
+Columbia University Libraries,"Jāmī, 1414-1492",1700-01-01T00:00:00Z,ldpd_14677888_000,per,[Subḥat al-abrār]
+Columbia University Libraries,,1350-01-01T00:00:00Z,ldpd_15264389_000,ara,[al-Qurʼān]
+Columbia University Libraries,,1700-01-01T00:00:00Z,ldpd_14294922_000,per,Risālah dar hayʼat. [Sharḥ-i Risālah dar hayʼat]
+Columbia University Libraries,"Ḥāfiẓ, active 14th century",1700-01-01T00:00:00Z,ldpd_14642709_000,per,[Leaf with ghazal of Ḥāfiẓ]
+Columbia University Libraries,,1812-01-01T00:00:00Z,ldpd_15265587_000,ara,[al-Qurʼān]
+Columbia University Libraries,"Ṭabāṭabāʼī, Muḥammad Ashraf ibn Ḥabīb Allāh, active 17th century",1600-01-01T00:00:00Z,ldpd_14642716_000,ara,Sharḥ Khulāṣat al-ḥisāb
+Columbia University Libraries,,1850-01-01T00:00:00Z,ldpd_15467915_000,ara,Mawlid al-Nabī Muḥammad
+Columbia University Libraries,,1400-01-01T00:00:00Z,ldpd_14642707_000,ara,[Two mounted Qurʼān leaves]
+Columbia University Libraries,,1800-01-01T00:00:00Z,ldpd_14294918_000,ara,[al-Qurʼān]
+Columbia University Libraries,,1400-01-01T00:00:00Z,ldpd_14230834_000,ara,al-Juzʼ al-ḥādī ʻashar
+Columbia University Libraries,,1400-01-01T00:00:00Z,ldpd_14230888_000,ara,al-Juzʼ al-ʻishrūn
+Columbia University Libraries,,1300-01-01T00:00:00Z,ldpd_14230716_000,ara,al-Juzʼ al-thālith ʻashar
+Columbia University Libraries,"Jamālī, Faḍīl ibn ʻAlī, active 1551",1551-01-01T00:00:00Z,ldpd_15264381_000,ara,Risālat al-waẓāʼif al-wāfiyah
+Columbia University Libraries,"Niẓāmī Ganjavī, 1140 or 1141-1202 or 1203",1600-01-01T00:00:00Z,ldpd_14678729_000,ara,[Leaf from Makhzan al-asrār]
+Columbia University Libraries,"Birjandī, ʻAbd al-ʻAlī ibn Muḥammad ibn Ḥusayn, active 16th century",1686-01-01T00:00:00Z,ldpd_15311687_000,per,Sharḥ-i Zīj-i Sulṭānī
+Columbia University Libraries,"Amīr Khusraw Dihlavī, approximately 1253-1325",1568-01-01T00:00:00Z,ldpd_14642787_000,per,[Khamsah]
+Columbia University Libraries,"Birgivî Mehmet Efendi, approximately 1522-1573",1726-01-01T00:00:00Z,ldpd_14642789_000,ota,Vaṣiyyet
+Columbia University Libraries,,1809-01-01T00:00:00Z,ldpd_14642791_000,ara,[al-Qurʼān]
+Columbia University Libraries,"Rawghanī, Muḥammad Ṣāliḥ ibn Muḥammad Bāqir, -1632 or 1633",1750-01-01T00:00:00Z,ldpd_13892974_000,per,[Sharḥ-i Nahj al-balāghah]
+Columbia University Libraries,"Ṭūsī, Naṣīr al-Dīn Muḥammad ibn Muḥammad, 1201-1274",1600-01-01T00:00:00Z,ldpd_14642084_000,per,Dar maʻrifat-i taqvīm mushtamil bar sī faṣl
+Columbia University Libraries,"Quṭb al-Shīrāzī, Maḥmūd ibn Masʻūd, 1236 or 1237-1310 or 1311",1378-01-01T00:00:00Z,ldpd_14642715_000,per,Tarjumah-i kitāb-i Taḥrīr-i Uqlīdus-i dar uṣūl-i handasah va ḥisāb
+Columbia University Libraries,,1750-01-01T00:00:00Z,ldpd_14230785_000,ara,al-Juzʼ al-ʻishrūn
+Columbia University Libraries,,1674-01-01T00:00:00Z,ldpd_13604650_000,ara,al-Juzʼ al-ḥādī ʻashr
+Columbia University Libraries,,1700-01-01T00:00:00Z,ldpd_15265580_000,ara,[Sūrat al-Anʻām]
+Columbia University Libraries,,1750-01-01T00:00:00Z,ldpd_14230779_000,ara,al-Juzʼ al-khāmis
+Columbia University Libraries,"Ibn al-Ḥājib, ʻUthmān ibn ʻUmar, 1175-1249",1581-01-01T00:00:00Z,ldpd_14649875_000,ara,[al-Kāfiyah]
+Columbia University Libraries,,1300-01-01T00:00:00Z,ldpd_14734938_000,ara,[al-Qurʼān]
+Columbia University Libraries,,1200-01-01T00:00:00Z,ldpd_14642792_000,ara,[al-Qurʼān]
+Columbia University Libraries,"Bāz̲il, Muhammad Rafīʻ ibn Muḥammad al-Mashhadī, -1712",1831-01-01T00:00:00Z,ldpd_14649886_000,per,Ḥamlah-i Ḥaydarī
+Columbia University Libraries,"Ibn Hishām, ʻAbd Allāh ibn Yūsuf, 1309-1360",1700-01-01T00:00:00Z,ldpd_15467907_000,ara,Kitāb Matn al-tawḍīḥ
+Columbia University Libraries,,1674-01-01T00:00:00Z,ldpd_13604655_000,ara,al-Juzʼ al-thānī wa-al-ʻishrūn
+Columbia University Libraries,,1850-01-01T00:00:00Z,ldpd_14734182_000,per,[Two illustrations from Qurʼānic stories]
+Columbia University Libraries,,1750-01-01T00:00:00Z,ldpd_13893008_000,ara,al-Juzʼ al-thāmin
+Columbia University Libraries,"Gunābādī, Muẓaffar ibn Muḥammad Qāsim, -1621 or 1622",1786-01-01T00:00:00Z,ldpd_14642092_000,per,Sharḥ-i bīst bāb
+Columbia University Libraries,"Ulugh Beg, 1394-1449",1836-01-01T00:00:00Z,ldpd_15264398_000,per,[Zīj-i sulṭānī]
+Columbia University Libraries,,1700-01-01T00:00:00Z,ldpd_14642102_000,ara,[al-Qurʼān]
+Columbia University Libraries,"Ibn Ḥabīb al-Ḥalabī, Badr al-Dīn al-Ḥasan ibn ʻUmar, 1310-1377",1700-01-01T00:00:00Z,ldpd_14230902_000,ara,Kitāb Nasīm al-ṣabā ..
+Columbia University Libraries,,1700-01-01T00:00:00Z,ldpd_14294930_000,ara,[al-Qurʼān]
+Columbia University Libraries,"Ḥarīrī, 1054-1122",1820-01-01T00:00:00Z,ldpd_14734798_000,ara,al-Maqāmāt
+Columbia University Libraries,,1400-01-01T00:00:00Z,ldpd_14230809_000,ara,[al-Juzʼ al-khāmis ʻashar]
+Columbia University Libraries,,1850-01-01T00:00:00Z,ldpd_13893214_000,per,[Painted manuscript leaves]
+Columbia University Libraries,Saʻdī,1700-01-01T00:00:00Z,ldpd_14734763_000,per,[Gulistān]
+Columbia University Libraries,,1575-01-01T00:00:00Z,ldpd_14677645_000,per,Chand risālah dar ḥisāb va hayʼāt
+Columbia University Libraries,Omar Khayyam,1700-01-01T00:00:00Z,ldpd_15264441_000,ara,Ṣināʻat al-jabr wa-al-muqābalah
+Columbia University Libraries,,1674-01-01T00:00:00Z,ldpd_13604636_000,ara,[al-Juzʼ al-thāmin ʻashar]
+Columbia University Libraries,,1300-01-01T00:00:00Z,ldpd_14566261_000,ara,[Qurʼān leaves]
+Columbia University Libraries,Saʻdī,1627-01-01T00:00:00Z,ldpd_15467897_000,per,Gulistān
+Columbia University Libraries,"Jurjānī, al-Ḥusayn ibn al-Ḥasan, active 1332",1500-01-01T00:00:00Z,ldpd_14642100_000,per,[Jalāʼ al-adhhān wa-jalāʼ al-aḥzān fī tafsīr al-Qurʼān]
+Columbia University Libraries,,1674-01-01T00:00:00Z,ldpd_13604653_000,ara,[al-Juzʼ al-ḥādī wa-al-ʻishrūn]
+Columbia University Libraries,,1750-01-01T00:00:00Z,ldpd_15265573_000,ara,al-Juzʼ al-tāsiʻ
+Columbia University Libraries,"Ibn Qāḍī ʻAjlūn, Muḥammad ibn ʻAbd Allāh, 1427 or 1428-1471 or 1472",1600-01-01T00:00:00Z,ldpd_14642701_000,ara,Kitāb Badīʻ al-maʻānī fī sharḥ ʻAqīdat al-Shaybānī
+Columbia University Libraries,,1723-01-01T00:00:00Z,ldpd_13893210_000,ota,Hādhā kitāb sih zabān
+Columbia University Libraries,"Raz̤avī, Mīr Ghulām Ḥusayn",1700-01-01T00:00:00Z,ldpd_15311691_000,per,Khulāṣat al-handasah
+Columbia University Libraries,,1700-01-01T00:00:00Z,ldpd_15265590_000,ara,[al-Qurʼān]
+Columbia University Libraries,"Jighmīnī, Maḥmūd ibn Muḥammad, -1221",1500-01-01T00:00:00Z,ldpd_13604005_000,ara,Al-Mulakhkhaṣ fī al-hayʼah : [manuscript]
+Columbia University Libraries,"Ṭūsī, Naṣīr al-Dīn Muḥammad ibn Muḥammad, 1201-1274",1299-01-01T00:00:00Z,ldpd_14642082_000,per,Mukhtaṣar-i Bīst dar maʻrifat-i usṭurlāb
+Columbia University Libraries,"ʻIyāḍ ibn Mūsá, 1083-1149",1700-01-01T00:00:00Z,ldpd_15467917_000,ara,al-Shifāʼ fī taʻrīf ḥuqūq al-Muṣṭafá
+Columbia University Libraries,,1750-01-01T00:00:00Z,ldpd_15265594_000,ara,Kitāb nafīs yufṣaḥu fīhi ʻan al-lughah al-Turkīyah
+Columbia University Libraries,,1700-01-01T00:00:00Z,ldpd_15311699_000,ara,ʻIlm al-badīʻ
+Columbia University Libraries,,1779-01-01T00:00:00Z,ldpd_14642794_000,ara,al-Qurʼān
+Columbia University Libraries,,1750-01-01T00:00:00Z,ldpd_14294921_000,ara,Khulāṣat al-ḥisāb. al-Risālah al-Muḥammadīyah
+Columbia University Libraries,,1732-01-01T00:00:00Z,ldpd_14642522_000,ara,Hādhihi Fawāʼid mutanawwiʻat al-mawāʼid
+Columbia University Libraries,"Birjandī, ʻAbd al-ʻAlī ibn Muḥammad ibn Ḥusayn, active 16th century",1700-01-01T00:00:00Z,ldpd_14677485_000,per,[Sharḥ-i Bīst bāb-i usṭurlāb]
+Columbia University Libraries,,1674-01-01T00:00:00Z,ldpd_13892610_000,ara,al-Juzʼ al-thāmin wa-al-ʻishrūn
+Columbia University Libraries,"Maktabī Shīrāzī, -1510 or 1511",1820-01-01T00:00:00Z,ldpd_14230893_000,per,[Laylī va Majnūn]
+Columbia University Libraries,"Maḥmud Mīrzā Qājār, 1799-",1820-01-01T00:00:00Z,ldpd_14642097_000,per,Dīvān
+Columbia University Libraries,"Ghazzī, Aḥmad ibn Qāsim, -1575",1700-01-01T00:00:00Z,ldpd_14230904_000,ara,Sharḥ ʻalá Nuzʹhat al-nuẓẓār fī ʻilm al-ghubār
+Columbia University Libraries,,1674-01-01T00:00:00Z,ldpd_13892631_000,ara,al-Juzʼ al-khāmis ʻashar min al-rabʻah al-sharīfah
+Columbia University Libraries,"Qūshjī, ʻAlī ibn Muḥammad, -1474 or 1475",1800-01-01T00:00:00Z,ldpd_15311688_000,per,Risālah dar ʻIlm-i hayʼat
+Columbia University Libraries,"Jawād al-Baghdādī, Jawād ibn Saʻd, -1654 or 1655",1700-01-01T00:00:00Z,ldpd_14642094_000,ara,[Sharḥ Khulāṣat al-ḥisāb]
+Columbia University Libraries,,1817-01-01T00:00:00Z,ldpd_14230713_000,ara,al-Qurʼān
+Columbia University Libraries,,1674-01-01T00:00:00Z,ldpd_13604637_000,ara,al-Juzʼ al-sādis
+Columbia University Libraries,,1800-01-01T00:00:00Z,ldpd_13892530_000,per,Baḥr al-ʻUyūn
+Columbia University Libraries,,1574-01-01T00:00:00Z,ldpd_14294926_000,ara,Kitāb Talkhīṣ al-Miftāḥ ..
+Columbia University Libraries,Surkhāb,1528-01-01T00:00:00Z,ldpd_13892500_000,per,Kitāb-i Surkhāb dar ʻilm-i raml
+Columbia University Libraries,,1650-01-01T00:00:00Z,ldpd_13892937_000,ara,al-Juzʼ al-sābiʻ wa-al-ʻishrūn
+Columbia University Libraries,"Muṣliḥ al-Dīn al-Lārī, Muḥammad ibn Ṣalāḥ, -1571 or 1572",1683-01-01T00:00:00Z,ldpd_15147167_000,ara,Ḥawāshī kāshifah ʻan ghawāshī ʻalá Sharḥ al-Hidāyah
+Columbia University Libraries,"Qāḍīʹzādah, Mūsá ibn Muḥammad, -approximately 1436",1685-01-01T00:00:00Z,ldpd_13604149_000,ara,[Sharḥ ashkāl al-taʼsīs]
+Columbia University Libraries,,1711-01-01T00:00:00Z,ldpd_14642747_000,ara,[Majmūʻah]
+Columbia University Libraries,"Bukhārī, Muḥammad ibn Ismāʻīl, 810-870",1700-01-01T00:00:00Z,ldpd_14230807_000,ara,[Jāmiʻ al-ṣaḥīḥ]
+Columbia University Libraries,"Shanawānī, Abū Bakr ibn Ismāʻīl, 1551 or 1552-1610 or 1611",1637-01-01T00:00:00Z,ldpd_14230891_000,ara,Taʻlīq al-durrah al-Shanawānīyah ʻalá Sharḥ al-Ajurrūmīyah fī ʻilm al-ʻArabīyah
+Columbia University Libraries,,1709-01-01T00:00:00Z,ldpd_14294916_000,ara,al-Risālah fī al-uṣūl al-ʻasharah min al-taṣawwuf. Risālat al-Taḥdhīr
+Columbia University Libraries,"Maghribī, Muḥyī al-Dīn, -approximately 1281",1866-01-01T00:00:00Z,ldpd_15147171_000,ara,Tahdhīb Makhrūṭāt Abulūniyūs
+Columbia University Libraries,,1762-01-01T00:00:00Z,ldpd_14642105_000,ave,[Vendidad Sade]
+Columbia University Libraries,"Ṣūfī, ʻAbd al-Raḥmān ibn ʻUmar, 903-986",1700-01-01T00:00:00Z,ldpd_14649868_000,per,Kitāb-i Ṣuwar al-kawākib
+Columbia University Libraries,,1650-01-01T00:00:00Z,ldpd_13892634_000,ara,al-Juzʼ al-khāmis wa-al-ʻishrūn
+Columbia University Libraries,,1828-01-01T00:00:00Z,ldpd_15311690_000,per,[Two works on astronomy in Persian]
+Columbia University Libraries,Euclid,1830-01-01T00:00:00Z,ldpd_15265560_000,ara,Kitāb Uṣū̄l al-handasah wa-al-ḥisāb : [manuscript]
+Columbia University Libraries,,1674-01-01T00:00:00Z,ldpd_13604629_000,ara,al-Juzʼ al-rābiʻ ʻashar min al-rabʻah al-sharīfah
+Columbia University Libraries,"ʻĀmilī, Bahāʼ al-Dīn Muḥammad ibn Ḥusayn, 1547-1621",1650-01-01T00:00:00Z,ldpd_13604105_000,ara,Khulāṣat al-ḥisāb
+Columbia University Libraries,,1600-01-01T00:00:00Z,ldpd_15147191_000,ara,[al-Qurʼān]
+Columbia University Libraries,,1859-01-01T00:00:00Z,ldpd_14734380_000,ave,[Vīdēvdād]
+Columbia University Libraries,"Ibn al-Fāriḍ, ʻUmar ibn ʻAlī, 1181 or 1182-1235",1875-01-01T00:00:00Z,ldpd_13604192_000,ara,Dīwān Tāj al-ʻārifīn wa-sulṭān al-ʻāshiqīn min al-shuʻarāʼ bi-lā muʻāriḍ ʻUmar ibn Fāriḍ
+Columbia University Libraries,,1750-01-01T00:00:00Z,ldpd_14230789_000,ara,al-Juzʼ al-thānī wa-al-ʻishrūn
+Columbia University Libraries,,1600-01-01T00:00:00Z,ldpd_14230596_000,ara,[al-Qurʼān]
+Columbia University Libraries,"Ibn al-Kharrāṭ, ʻAbd al-Ḥaqq ibn ʻAbd al-Raḥmān, 1116 or 1117-1185",1600-01-01T00:00:00Z,ldpd_14642788_000,ara,[al-ʻĀqibah fī dhikr al-mawt]
+Columbia University Libraries,,1674-01-01T00:00:00Z,ldpd_13892619_000,ara,[al-Juzʼ al-thānī wa-al-ʻishrūn]
+Columbia University Libraries,,1653-01-01T00:00:00Z,ldpd_13604011_000,ota,[Calendar for year 1064 AH] : [manuscript]
+Columbia University Libraries,,1537-01-01T00:00:00Z,ldpd_15147162_000,ara,[al-Qurʼān]
+Columbia University Libraries,,1800-01-01T00:00:00Z,ldpd_14734423_000,per,Adventures of Hatim Tai
+Columbia University Libraries,,1741-01-01T00:00:00Z,ldpd_14230690_000,ara,al-Qurʼān
+Columbia University Libraries,,1800-01-01T00:00:00Z,ldpd_14734132_000,per,[Framed lacquer painting]
+Columbia University Libraries,,1750-01-01T00:00:00Z,ldpd_13893195_000,ara,al-Juzʼ al-rābiʻ ʻashar
+Columbia University Libraries,,1849-01-01T00:00:00Z,ldpd_15147196_000,ara,[al-Qurʼān]
+Columbia University Libraries,,1700-01-01T00:00:00Z,ldpd_14230714_000,ara,[al-Qurʼān]
+Columbia University Libraries,"Jāmī, 1414-1492",1725-01-01T00:00:00Z,ldpd_13893201_000,per,[Leaf from Yūsuf va Zulaykhā]
+Columbia University Libraries,"Ghaznawī, Aḥmad, -1196 or 1197",1684-01-01T00:00:00Z,ldpd_13892931_000,ara,al-Muqaddimah al-Ghaznawīyah
+Columbia University Libraries,,1600-01-01T00:00:00Z,ldpd_14642795_000,ota,[Ottoman Turkish expansion on al-Būṣīrī's qaṣīdat al-Burdah]
+Columbia University Libraries,,1674-01-01T00:00:00Z,ldpd_13892618_000,ara,al-Juzʼ al-sādis ʻashar
+Columbia University Libraries,,1674-01-01T00:00:00Z,ldpd_13892929_000,ara,al-Juzʼ al-tāsiʻ
+Columbia University Libraries,,1596-01-01T00:00:00Z,ldpd_13604169_000,per,Sharḥ-i ʻaṣā-yi mukhtariʻ-i humāyūn pādshāh. Ganj-i nahān khānah-i ḥayy-i qadīm
+Columbia University Libraries,"Hātif, Sayyid Aḥmad, -1783 or 1784",1775-01-01T00:00:00Z,ldpd_14734460_000,per,[Dīvān]
+Columbia University Libraries,"Bhāskarācārya, 1114-",1675-01-01T00:00:00Z,ldpd_13892523_000,per,Līlāvatī: [manuscript]
+Columbia University Libraries,,1495-01-01T00:00:00Z,ldpd_14566181_000,ara,Sharḥ Hidāyat al-ḥikmah. Risālah fī ʻilm al-hayʼah
+Columbia University Libraries,"Muʻaẓẓam, Sultan of Damascus, 1180-1227",1226-01-01T00:00:00Z,ldpd_14734880_000,ara,al-Sahm al-muṣīb fī kabid al-Khaṭīb
+Columbia University Libraries,,1675-01-01T00:00:00Z,ldpd_13604622_000,ara,al-Juzʼ al-rābiʻ wa-al-ʻishrūn
+Columbia University Libraries,"Kashfī, Jaʻfar ibn Abī Isḥāq, -1850 or 1851",1818-01-01T00:00:00Z,ldpd_13893200_000,per,Tuḥfat al-mulūk
+Columbia University Libraries,"Jalāl al-Dīn Rūmī, Maulana, 1207-1273",1495-01-01T00:00:00Z,ldpd_13892539_000,per,al-Mujallad al-rābiʻ min al-mathnawī al-maʻnawī al-hādī ilá ṣirāṭ al-sawī
+Columbia University Libraries,,1674-01-01T00:00:00Z,ldpd_13892616_000,ara,al-Juzʼ al-awwal
+Columbia University Libraries,"Ṭūsī, Naṣīr al-Dīn Muḥammad ibn Muḥammad, 1201-1274",1650-01-01T00:00:00Z,ldpd_13603952_000,per,Sharḥ-i ṣad kalimah-i Baṭlamiyūs
+Columbia University Libraries,"Ghazzī, Muḥammad ibn Qāsim, 1454 or 1455-1512 or 1513",1676-01-01T00:00:00Z,ldpd_14642786_000,ara,Fatḥ al-qarīb al-mujīb fī sharḥ alfāẓ al-Taqrīb
+Columbia University Libraries,,1600-01-01T00:00:00Z,ldpd_14642086_000,per,ʻAjīb al-masāʼil. [Risālah dar hayʼat]
+Columbia University Libraries,"Ibn Abī Zayd al-Qayrawānī, ʻAbd Allāh ibn ʻAbd al-Raḥmān, active 10th century, author",1589-01-01T00:00:00Z,ldpd_12411428_000,spa,Risala
+Columbia University Libraries,,1432-01-01T00:00:00Z,ldpd_15265608_000,per,[Collection of Persian poetry]
+Columbia University Libraries,,2023-08-10T00:00:00Z,ldpd_14642736_000,ara,[Qurʼān folio]
+Columbia University Libraries,,1602-01-01T00:00:00Z,ldpd_15147174_000,ara,al-Qurʼān
+Columbia University Libraries,,1818-01-01T00:00:00Z,ldpd_13893217_000,ara,[al-Qurʼān]
+Columbia University Libraries,Euclid,1348-01-01T00:00:00Z,ldpd_13604039_000,ara,Uṣūl al-handasah wa-al-ḥisāb
+Columbia University Libraries,"Muʻīn al-Dīn Yazdī, -1387",1431-01-01T00:00:00Z,ldpd_14649872_000,per,[Mavāhib-i ilāhī]
+Columbia University Libraries,"Ḥāfiẓ, active 14th century",1700-01-01T00:00:00Z,ldpd_14642099_000,per,Dīvān
+Columbia University Libraries,,1674-01-01T00:00:00Z,ldpd_13892927_000,ara,al-Juzʼ al-tāsiʻ ʻashar
+Columbia University Libraries,"Bhāskarācārya, 1114-",1711-01-01T00:00:00Z,ldpd_13604137_000,per,Līlāvatī
+Columbia University Libraries,,1825-01-01T00:00:00Z,ldpd_15147187_000,per,Hāz̲ā kitāb Sirāj al-munīr. ʻAqāyid al-nisā
+Columbia University Libraries,"Āmulī, Rukn ibn Sharaf al-Dīn, active 1456",1750-01-01T00:00:00Z,ldpd_13604004_000,per,Panjāh bāb-i sulṭānī bi-ʻilm-i usṭurlāb : [manuscript]
+Columbia University Libraries,"Theodosius, active 1st century B.C",1850-01-01T00:00:00Z,ldpd_13604015_000,ara,Kitāb al-ukar : [manuscript]
+Columbia University Libraries,Saʻdī,1757-01-01T00:00:00Z,ldpd_15467901_000,per,[Būstān. Pandnāmah]
+Columbia University Libraries,"Tustarī, Ṣūfī Kamāl, active 14th century",1462-01-01T00:00:00Z,ldpd_14642096_000,per,[Ghāyat al-murād fī wifq al-aʻdād]
+Columbia University Libraries,,1400-01-01T00:00:00Z,ldpd_14642706_000,ara,[Coptic-Arabic glossary]
+Columbia University Libraries,,1719-01-01T00:00:00Z,ldpd_14294923_000,ara,Hādhihi risālah fī al-ḥisāb ..
+Columbia University Libraries,"Ibn Hishām, ʻAbd Allāh ibn Yūsuf, 1309-1360",1600-01-01T00:00:00Z,ldpd_13604624_000,ara,Sharḥ Qaṭr al-nadā wa-ball al-ṣadā
+Columbia University Libraries,"Vehbi, approximately 1719-1809",1775-01-01T00:00:00Z,ldpd_14294928_000,ota,Hadhā kitāb Tuḥfah-ʼi Vahbī Sünbülʹzade
+Columbia University Libraries,"Vella, Giuseppe, -1815",1793-01-01T00:00:00Z,ldpd_12993928_000,eng,Kitāb Dīwān Miṣr
+Columbia University Libraries,"Şahidî İbrahim Dede, 1470-1550",1783-01-01T00:00:00Z,ldpd_14642783_000,ota,[Tuhfe-yi Șāhidī]
+Columbia University Libraries,Euclid,1638-01-01T00:00:00Z,ldpd_13892533_000,ara,Uṣūl al-handasah wa-al-ḥisāb. Fī bayān al-murabbaʻāt
+Columbia University Libraries,,1600-01-01T00:00:00Z,ldpd_14230576_000,ara,[al-Qurʼān]
+Columbia University Libraries,,1674-01-01T00:00:00Z,ldpd_13892636_000,ara,al-Juzʼ al-rābiʻ
+Columbia University Libraries,,1845-01-01T00:00:00Z,ldpd_14294919_000,ara,[al-Abjad]
+Columbia University Libraries,,1776-01-01T00:00:00Z,ldpd_13604207_000,ara,al-Qurʼān
+Columbia University Libraries,,1265-01-01T00:00:00Z,ldpd_14294924_000,ara,Kitāb al-mutawassiṭāt
+Columbia University Libraries,Rajab ʻAlī Beg,1851-01-01T00:00:00Z,ldpd_13604121_000,per,Badīʻ al-ḥisāb
+Columbia University Libraries,"ʻĀmilī, Bahāʼ al-Dīn Muḥammad ibn Ḥusayn, 1547-1621",1700-01-01T00:00:00Z,ldpd_13892528_000,ara,Khulāṣat al-ḥisāb : [manuscript]
+Columbia University Libraries,Omar Khayyam,1688-01-01T00:00:00Z,ldpd_14642741_000,per,Rubāʻīyāt-i ʻUmar Khayyam
+Columbia University Libraries,"Ibn Ḥijjah al-Ḥamawī, Taqī al-Dīn Abū Bakr ibn ʻAlī, -1434",1490-01-01T00:00:00Z,ldpd_14649874_000,ara,Taqdīm Abī Bakr
+Columbia University Libraries,,1700-01-01T00:00:00Z,ldpd_14230775_000,ara,[Qurʼān leaves]
+Columbia University Libraries,,1855-01-01T00:00:00Z,ldpd_14642106_000,pal,Āghāz-i kitāb-i Vīsparad bā maʻnī-i Fārsī tarjumah kardah mīnavīsam
+Columbia University Libraries,,1700-01-01T00:00:00Z,ldpd_14230571_000,ara,[al-Qurʼān]
+Columbia University Libraries,"Jazūlī, Muḥammad ibn Sulaymān, -1465",1850-01-01T00:00:00Z,ldpd_13892935_000,ara,Dalāʼil al-khayrāt wa shawāriq al-anwār fī dhikr al-ṣalāh ʻalá al-nabī al-mukhtār
+Columbia University Libraries,"ʻInāyat Allāh, -approximately 1671",1700-01-01T00:00:00Z,ldpd_14649864_000,per,Bahār-i dānish
+Columbia University Libraries,,1700-01-01T00:00:00Z,ldpd_14230792_000,ara,[al-Qurʼān]
+Columbia University Libraries,,1817-01-01T00:00:00Z,ldpd_13604180_000,per,Bīst bāb dar ʻilm-i usṭurlāb
+Columbia University Libraries,"Autolycus, active 2nd century",1725-01-01T00:00:00Z,ldpd_13892520_000,ara,Kitāb al-kurah al-mutaḥarrikah : [manuscript]
+Columbia University Libraries,,1775-01-01T00:00:00Z,ldpd_13604101_000,ota,[Treatise on composing letters]
+Columbia University Libraries,"Jibrīl, Zayn al-Dīn Muḥammad, active 15th century-16th century",1580-01-01T00:00:00Z,ldpd_14642744_000,ara,Kitāb sharḥ al-Jurrūmīyah
+Columbia University Libraries,"Qūshjī, ʻAlī ibn Muḥammad, -1474 or 1475",1792-01-01T00:00:00Z,ldpd_14566259_000,per,[Risālah dar hayʼat]
+Columbia University Libraries,,1670-01-01T00:00:00Z,ldpd_14294925_003,ara,Kitāb fī sharḥ al-Mulakhkhaṣ ..
+Columbia University Libraries,,1670-01-01T00:00:00Z,ldpd_14294925_002,ara,Kitāb fī sharḥ al-Mulakhkhaṣ ..
+Columbia University Libraries,,1500-01-01T00:00:00Z,ldpd_13892939_000,ara,Nuskhat al-sijill alladhī wujida muʻallaqan ʻalá al-mashāhid fī ghaybat Mawlānā al-Imām al-Ḥākim ..
+Columbia University Libraries,"Ibn ʻAsākir, ʻAlī ibn al-Ḥasan, 1105-1176",1141-01-01T00:00:00Z,ldpd_14734831_000,ara,al-Juzʼ... min kitāb Tārīkh madīnat Dimashq
+Columbia University Libraries,"Theodosius, active 1st century B.C",1800-01-01T00:00:00Z,ldpd_14642088_000,ara,Kitāb al-ukar
+Columbia University Libraries,,1650-01-01T00:00:00Z,ldpd_13893005_000,ara,[Collection of prayers]
+Columbia University Libraries,,1664-01-01T00:00:00Z,ldpd_13604127_000,per,Badāʼiʻ al-funūn
+Columbia University Libraries,"Gulāb Rāʼī, Fadwá, active 19th century, artist",1823-01-01T00:00:00Z,ldpd_15147183_000,per,[Calligraphy samples in Persian]
+Columbia University Libraries,,1000-01-01T00:00:00Z,ldpd_14642790_000,ara,[Leaf from the Qurʼān]
+Columbia University Libraries,"Autolycus, active 2nd century",1830-01-01T00:00:00Z,ldpd_13604167_000,ara,Kitāb al-kurah al-mutaḥarrikah
+Columbia University Libraries,"Ibn Ghāzī, Muḥammad ibn Aḥmad, 1437 or 1438-1513",1747-01-01T00:00:00Z,ldpd_14642091_000,ara,Bughyat al-ṭullāb fī sharḥ Munyat al-ḥussāb
+Columbia University Libraries,,1698-01-01T00:00:00Z,ldpd_15147169_000,ara,[Astronomical tables]
+Columbia University Libraries,,1670-01-01T00:00:00Z,ldpd_14294925_001,ara,Kitāb fī sharḥ al-Mulakhkhaṣ ..
+Columbia University Libraries,,1726-01-01T00:00:00Z,ldpd_14566257_000,ave,[Khordah Avesta]
+Columbia University Libraries,,1670-01-01T00:00:00Z,ldpd_14294925_004,ara,Kitāb fī sharḥ al-Mulakhkhaṣ ..
+Columbia University Libraries,"Khuwārizmī, Muḥammad ibn Mūsá, active 813-846",1700-01-01T00:00:00Z,ldpd_15856267_000,ara,al-Jabr wa al-muqābalah
+Columbia University Libraries,"Ṭūsī, Naṣīr al-Dīn Muḥammad ibn Muḥammad, 1201-1274",1700-01-01T00:00:00Z,ldpd_15311686_000,per,Kitāb-i usṭurlāb az Muḥaqqiq-i Ṭūsī
+Columbia University Libraries,"ʻIyāḍ ibn Mūsá, 1083-1149",1700-01-01T00:00:00Z,ldpd_15147159_000,ara,al-Shifāʼ fī taʻrīf ḥuqūq al-Muṣṭafá
+Columbia University Libraries,,1500-01-01T00:00:00Z,ldpd_15265591_000,ara,Ḥafīrat al-taʼsīs min taʼlīf al-Qass Alīʻāzar
+Columbia University Libraries,,1700-01-01T00:00:00Z,ldpd_14642750_000,ara,[Collection of works on Arabic grammar]
+Columbia University Libraries,"Isḥāqī, Fatḥ Allāh ibn Shaykh Muṣṭafá ibn Shaykh ʻAbd al-Shakūr Fārūqī",1603-01-01T00:00:00Z,ldpd_13892504_000,per,Sabʻ samavāt li-sirr-i samāʼī
+Columbia University Libraries,,1775-01-01T00:00:00Z,ldpd_13604186_000,per,[Majmūʻah]
+Columbia University Libraries,"Theodosius, active 1st century B.C",1895-01-01T00:00:00Z,ldpd_14230900_000,ara,Kitāb al-ukar
+Columbia University Libraries,"Anṭākī, Dāʼūd ibn ʻUmar, -1599",1713-01-01T00:00:00Z,ldpd_15311696_000,ara,Tadhkirah
+Columbia University Libraries,"Taftāzānī, Masʻūd ibn ʻUmar, 1322-1389",1500-01-01T00:00:00Z,ldpd_14642784_000,ara,[Mukhtaṣar al-maʻānī fī al-balāghah]
+Columbia University Libraries,,1200-01-01T00:00:00Z,ldpd_14642735_000,ara,[al-Qurʼān]
+Columbia University Libraries,"Kāshifī, Ḥusayn Vāʻiẓ, -1504 or 1505",1816-01-01T00:00:00Z,ldpd_14734517_000,per,Anvār-i Suhaylī
+Columbia University Libraries,"Ibn al-Wardī, Sirāj al-Dīn Abū Ḥafṣ ʻUmar, -1457",1600-01-01T00:00:00Z,ldpd_14642704_000,ota,Kharīdat al-ʻajāyib wa-farīdat al-gharāyib
+Columbia University Libraries,"Turkumānī, Kamāl al-Dīn, active 1354",1401-01-01T00:00:00Z,ldpd_13893208_000,ara,Risālah fī al-hayʼah al-falakīyah
+Columbia University Libraries,,1200-01-01T00:00:00Z,ldpd_14642090_000,ara,Fī al-falak wa-al-handasah wa-al-ḥisāb
+Columbia University Libraries,"Sibṭ al-Māridīnī, Badr al-Dīn Muḥammad ibn Muḥammad, 1423-",1472-01-01T00:00:00Z,ldpd_13893206_000,ara,Kitāb al-qawl al-mubdiʻ fī sharḥ al-Muqniʻ
