@@ -36,7 +36,7 @@ A reusable script that uses an input CSV of IA (Internet Archive) to create an o
   - Install [github for mac](http://mac.github.com/) (optional, but has some very nice features) 
 
 3. [Fork and clone](https://help.github.com/articles/fork-a-repo/) the repo
-  - fork the https://github.com/cul/clio-spectrum repo (fork button at top right of github web interface)
+  - fork the https://github.com/cul/ia-to-hyacinth repo (fork button at top right of github web interface)
   - clone the new forked repo onto your dev machine
  
         ````
