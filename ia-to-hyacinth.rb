@@ -8,18 +8,18 @@ INTERNET_ARCHIVE_IDENTIFIER_SUFFIX = '_000'
 def get_internet_archive_ids(internet_archive_entries, id_column)
     puts internet_archive_entries[1][id_column]
     unless internet_archive_entries[1][id_column].to_s.include?(INTERNET_ARCHIVE_IDENTIFIER_PREFIX)
-        for id_column in 0...internet_archive_entries[1].length
-            if internet_archive_entries[1][id_column].to_s.include?(INTERNET_ARCHIVE_IDENTIFIER_PREFIX)
-                break
+        internet_archive_entries[1].each_with_index do |element, i|
+            if element.to_s.include?(INTERNET_ARCHIVE_IDENTIFIER_PREFIX)
+                id_column = i
             end
         end
     end
 
     internet_archive_ids = []
     puts id_column
-    for i in 1...internet_archive_entries.length
+    internet_archive_entries.each do |entry|
         # Match a regex for PREFIX .*? SUFFIX and store it in a new array.
-        internet_archive_ids << internet_archive_entries[i][id_column].to_s[/#{INTERNET_ARCHIVE_IDENTIFIER_PREFIX}(.*?)#{INTERNET_ARCHIVE_IDENTIFIER_SUFFIX}/m, 1]
+        internet_archive_ids << entry[id_column].to_s[/#{INTERNET_ARCHIVE_IDENTIFIER_PREFIX}(.*?)#{INTERNET_ARCHIVE_IDENTIFIER_SUFFIX}/m, 1]
     end
     return internet_archive_ids
 end
@@ -28,7 +28,7 @@ end
 
 
 
-id_column = 3 # Expected column; will search if it doesn't contain the prefix.
+id_column = 2 # Expected column; will search if it doesn't contain the prefix.
 
 # Path to CSV containing Internet Archive records
 internet_archive_file = 'test/MuslimWorldManuscripts.csv'
