@@ -1,41 +1,58 @@
 require 'marc'
 require 'csv'
+require 'open-uri'
 
 INTERNET_ARCHIVE_IDENTIFIER_PREFIX = 'ldpd_'
-INTERNET_ARCHIVE_IDENTIFIER_SUFFIX = '_000'
+INTERNET_ARCHIVE_IDENTIFIER_SUFFIX = '_\d\d\d'
 
-# Takes as input the expected archive entries and returns list containing just the IDs
-def get_internet_archive_ids(internet_archive_entries, id_column)
-    puts internet_archive_entries[1][id_column]
-    unless internet_archive_entries[1][id_column].to_s.include?(INTERNET_ARCHIVE_IDENTIFIER_PREFIX)
-        internet_archive_entries[1].each_with_index do |element, i|
-            if element.to_s.include?(INTERNET_ARCHIVE_IDENTIFIER_PREFIX)
-                id_column = i
-            end
+MARC_FILE_URL_PREFIX = 'https://clio.columbia.edu/catalog/'
+MARC_FILE_URL_SUFFIX = '.marc'
+
+# Takes as input the path to a CSV of IA entries and returns list containing just the IDs
+# IA entries MUST contain a field titled `language`
+def get_internet_archive_ids(internet_archive_file)
+    clio_ids = []
+    CSV.foreach(internet_archive_file, :headers => true) do |entry|
+        puts entry
+        unless entry['identifier']
+            raise "csv files MUST contain a field titled 'identifier' formatted 'ldpd_########_000'"
         end
+        # Match a regex for [PREFIX].*?[SUFFIX] and store it in a new array.
+        clio_id = entry['identifier'].to_s[/#{INTERNET_ARCHIVE_IDENTIFIER_PREFIX}(.*?)#{INTERNET_ARCHIVE_IDENTIFIER_SUFFIX}/m, 1]
+        puts clio_id
+        puts
+        puts
+        unless clio_id
+            raise "csv files MUST contain a field titled 'identifier' formatted 'ldpd_########_000'"
+        end
+        clio_ids << clio_id
     end
-
-    internet_archive_ids = []
-    puts id_column
-    internet_archive_entries.each do |entry|
-        # Match a regex for PREFIX .*? SUFFIX and store it in a new array.
-        internet_archive_ids << entry[id_column].to_s[/#{INTERNET_ARCHIVE_IDENTIFIER_PREFIX}(.*?)#{INTERNET_ARCHIVE_IDENTIFIER_SUFFIX}/m, 1]
-    end
-    return internet_archive_ids
+    return clio_ids
 end
 
+# Takes in the ID of an Internet Archive entry and returns a has containing:
+#primary_clio_id
+#primary_record_title
+#print_record_clio_id
+#print_record_title
+def clio_record_from_id(clio_id)
+    dl = open(MARC_FILE_URL_PREFIX << clio_id.to_s << MARC_FILE_URL_SUFFIX)
+    IO.copy_stream(dl, "tmp/#{clio_id}.marc")
+    puts marc_file
+    return {}
+end
 
-
-
-
-id_column = 2 # Expected column; will search if it doesn't contain the prefix.
 
 # Path to CSV containing Internet Archive records
 internet_archive_file = 'test/MuslimWorldManuscripts.csv'
-internet_archive_entries = CSV.read(internet_archive_file)
-if internet_archive_entries.length < 2
-    raise "File '#{internet_archive_file}' has no entries."
-end
-internet_archive_ids = get_internet_archive_ids(internet_archive_entries, id_column)
-puts internet_archive_ids
+clio_ids = get_internet_archive_ids(internet_archive_file)
+puts clio_ids
 
+clio_records = []
+clio_ids.each do |clio_id|
+    if clio_id
+        clio_record = clio_record_from_id(clio_id)
+        clio_records << clio_record
+    end
+end
+# puts clio_records

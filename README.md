@@ -1,7 +1,10 @@
 # ia-to-hyacinth
 
-
 A reusable script that uses an input CSV of IA (Internet Archive) to create an output CSV that can be imported by Hyacinth.
+
+**Using ia-to-hyacinth**
+`ruby ia-to-hyacinth.rb ia_entries.csv`
+### Note: csv files MUST contain a field titled 'identifier' formatted 'ldpd_########_000'.
 
 **Getting started on OSX**
 
