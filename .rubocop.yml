@@ -1,0 +1,5 @@
+inherit_gem:
+  rubocul: rubocul_default.yml
+
+AllCops:
+  TargetRubyVersion: 3.1.4 

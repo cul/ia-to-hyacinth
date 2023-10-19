@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'marc'
 require 'csv'
 require 'open-uri'
@@ -13,15 +15,11 @@ MARC_FILE_URL_SUFFIX = '.marc'
 def get_internet_archive_ids(internet_archive_file)
     clio_ids = []
     CSV.foreach(internet_archive_file, :headers => true) do |entry|
-        puts entry
         unless entry['identifier']
             raise "csv files MUST contain a field titled 'identifier' formatted 'ldpd_########_000'"
         end
         # Match a regex for [PREFIX].*?[SUFFIX] and store it in a new array.
         clio_id = entry['identifier'].to_s[/#{INTERNET_ARCHIVE_IDENTIFIER_PREFIX}(.*?)#{INTERNET_ARCHIVE_IDENTIFIER_SUFFIX}/m, 1]
-        puts clio_id
-        puts
-        puts
         unless clio_id
             raise "csv files MUST contain a field titled 'identifier' formatted 'ldpd_########_000'"
         end
