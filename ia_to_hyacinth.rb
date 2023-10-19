@@ -34,9 +34,11 @@ end
 # print_record_clio_id
 # print_record_title
 def clio_record_from_id(clio_id)
-  dl = open(MARC_FILE_URL_PREFIX << clio_id.to_s << MARC_FILE_URL_SUFFIX)
-  IO.copy_stream(dl, "tmp/#{clio_id}.marc")
-  puts marc_file
+  io_stream = URI.parse("#{MARC_FILE_URL_PREFIX}#{clio_id}#{MARC_FILE_URL_SUFFIX}").open
+  reader = MARC::Reader.new(io_stream)
+  reader.each do |record|
+    puts record
+  end
   {}
 end
 
