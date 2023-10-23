@@ -28,18 +28,43 @@ def get_internet_archive_ids(internet_archive_file)
   clio_ids
 end
 
-# Takes in the ID of an Internet Archive entry and returns a has containing:
+# Takes in the ID of an Internet Archive entry and returns its corresponding marc record object.
+def get_marc_record(clio_id)
+  marc = nil
+  until marc
+    begin
+      marc = URI.parse("#{MARC_FILE_URL_PREFIX}#{clio_id}#{MARC_FILE_URL_SUFFIX}").read
+    rescue OpenURI::HTTPError => e
+      return nil if e.message.downcase.include? '404 not found'
+      puts "#{e.message} (#{MARC_FILE_URL_PREFIX}#{clio_id}#{MARC_FILE_URL_SUFFIX})"
+    end
+    sleep 0.5
+  end
+  MARC::Reader.decode(marc)
+end
+
+# Takes in a MARC::Record object and returns [print_record_clio_id, print_record_title] or [nil, nil]
+def get_print_records record
+  [nil, nil]
+end
+
+# Takes in the ID of an Internet Archive entry and returns a hash containing:
 # primary_clio_id
 # primary_record_title
 # print_record_clio_id
 # print_record_title
 def clio_record_from_id(clio_id)
-  io_stream = URI.parse("#{MARC_FILE_URL_PREFIX}#{clio_id}#{MARC_FILE_URL_SUFFIX}").open
-  reader = MARC::Reader.new(io_stream)
-  reader.each do |record|
-    puts record
-  end
-  {}
+  puts "getting record for #{clio_id}"
+  record = get_marc_record(clio_id)
+  return nil unless record # Return if record lookup resulted in a 404.
+
+  primary_clio_id = (record.fields '001')[0]
+  # Extract the 245 $a subfield and strip off brackets.
+  primary_record_title = (record.fields '245')[0]['a'][/\[*(.*?)\]*\.*$/m, 1]
+  puts primary_record_title
+  print_record_clio_id, print_record_title = get_print_records record
+
+  {primary_clio_id: primary_clio_id, primary_record_title: primary_record_title, print_record_clio_id: print_record_title, print_record_title: primary_record_title}
 end
 
 # Path to CSV containing Internet Archive records
@@ -54,4 +79,4 @@ clio_ids.each do |clio_id|
     clio_records << clio_record
   end
 end
-# puts clio_records
+puts clio_records
