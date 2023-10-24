@@ -15,9 +15,7 @@ MARC_FILE_URL_PREFIX = 'https://clio.columbia.edu/catalog/'
 MARC_FILE_URL_SUFFIX = '.marc'
 
 OCLC_JSON_PREFIX = 'https://clio.columbia.edu/catalog.json?q='
-
 PRINT_RECORD_IDENTIFIER_PREFIX = '(OCoLC)'
-
 LOG_FILE_PATH = 'error.log'
 
 class UserError < StandardError
@@ -155,6 +153,7 @@ def clio_record_from_id(clio_id, log)
   clio_record_from_id_helper clio_id if clio_id
 rescue UserError => e
   log.error e.message
+  nil
 rescue StandardError => e
   log.error e.message
   log.error e.backtrace.to_s
@@ -169,8 +168,8 @@ def convert_csv(internet_archive_file, output_file)
   JsonCsv.create_csv_for_json_records(output_file) do |csv_builder|
     clio_ids.each do |clio_id|
       hyacinth_record = clio_record_from_id clio_id, log
+      csv_builder.add hyacinth_record if hyacinth_record
       sleep 0.5
-      csv_builder.add hyacinth_record
     end
   end
 end
