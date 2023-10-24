@@ -116,7 +116,7 @@ end
 # primary_record_title
 # print_record_clio_id
 # print_record_title
-def clio_record_from_id(clio_id)
+def clio_record_from_id_helper(clio_id)
   puts "getting record for #{clio_id}"
   record = get_marc_record(clio_id)
   return nil unless record # Return if record lookup resulted in a 404.
@@ -132,30 +132,44 @@ def clio_record_from_id(clio_id)
     print_record_clio_id: print_record_clio_id, print_record_title: print_record_title }
 end
 
-log = Logger.new(LOG_FILE_PATH)
-# Path to CSV containing Internet Archive records
-internet_archive_file = 'test/MuslimWorldManuscripts.csv'
-begin
-  clio_ids = get_internet_archive_ids(internet_archive_file)
-rescue StandardError => e
-  log.error(e.message)
-  abort(e.message)
-end
-puts clio_ids
-
-clio_records = []
-clio_ids.each do |clio_id|
+# Takes in the path to CSV containing Internet Archive records and returns a list of those ids.
+def get_clio_ids(csv_path)
   begin
-    if clio_id
-      clio_record = clio_record_from_id(clio_id)
-      clio_records << clio_record if clio_record
-    end
-    sleep 0.5
-  rescue UserError => e
-    log.error(e.message)
+    clio_ids = get_internet_archive_ids(csv_path)
   rescue StandardError => e
     log.error(e.message)
-    log.error(e.backtrace.to_s)
-    raise
+    abort(e.message)
+  end
+  puts clio_ids
+  clio_ids
+end
+
+# Takes in the ID of an Internet Archive entry and returns a hash containing:
+# primary_clio_id
+# primary_record_title
+# print_record_clio_id
+# print_record_title
+# Wropper for helper function, handling errors that are thrown.
+def clio_record_from_id(clio_id, log)
+  clio_record_from_id_helper(clio_id) if clio_id
+rescue UserError => e
+  log.error(e.message)
+rescue StandardError => e
+  log.error(e.message)
+  log.error(e.backtrace.to_s)
+  raise
+end
+
+# Takes in the path to CSV containing Internet Archive records and writes
+# corresponding Hyacinth records to the specified output file.
+def convert_csv(internet_archive_file, output_file)
+  log = Logger.new(LOG_FILE_PATH)
+  clio_ids = get_clio_ids internet_archive_file
+  clio_ids.each do |clio_id|
+    hyacinth_record = create_record_from_id(clio_id, log)
+    sleep 0.5
   end
 end
+
+internet_archive_file = 'test/MuslimWorldManuscripts.csv'
+convert_csv internet_archive_file
