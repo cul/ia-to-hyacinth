@@ -2,6 +2,7 @@
 
 require 'csv'
 require 'json'
+require 'json_csv'
 require 'logger'
 require 'marc'
 require 'open-uri'
@@ -128,8 +129,8 @@ def clio_record_from_id_helper(clio_id)
   print_record_clio_id, print_record_title = get_print_record record, primary_clio_id
   puts "\tfound print record with clio_id #{print_record_clio_id}\n\t#{print_record_title}"
 
-  { primary_clio_id: primary_clio_id, primary_record_title: primary_record_title,
-    print_record_clio_id: print_record_clio_id, print_record_title: print_record_title }
+  { 'primary_clio_id' => primary_clio_id, 'primary_record_title' => primary_record_title,
+    'print_record_clio_id' => print_record_clio_id, 'print_record_title' => print_record_title }
 end
 
 # Takes in the path to CSV containing Internet Archive records and returns a list of those ids.
@@ -151,25 +152,29 @@ end
 # print_record_title
 # Wropper for helper function, handling errors that are thrown.
 def clio_record_from_id(clio_id, log)
-  clio_record_from_id_helper(clio_id) if clio_id
+  clio_record_from_id_helper clio_id if clio_id
 rescue UserError => e
-  log.error(e.message)
+  log.error e.message
 rescue StandardError => e
-  log.error(e.message)
-  log.error(e.backtrace.to_s)
+  log.error e.message
+  log.error e.backtrace.to_s
   raise
 end
 
 # Takes in the path to CSV containing Internet Archive records and writes
 # corresponding Hyacinth records to the specified output file.
 def convert_csv(internet_archive_file, output_file)
-  log = Logger.new(LOG_FILE_PATH)
+  log = Logger.new LOG_FILE_PATH
   clio_ids = get_clio_ids internet_archive_file
-  clio_ids.each do |clio_id|
-    hyacinth_record = create_record_from_id(clio_id, log)
-    sleep 0.5
+  JsonCsv.create_csv_for_json_records(output_file) do |csv_builder|
+    clio_ids.each do |clio_id|
+      hyacinth_record = clio_record_from_id clio_id, log
+      sleep 0.5
+      csv_builder.add hyacinth_record
+    end
   end
 end
 
 internet_archive_file = 'test/MuslimWorldManuscripts.csv'
-convert_csv internet_archive_file
+output_file = 'test/MuslimWorldManuscripts_hy.csv'
+convert_csv internet_archive_file, output_file
