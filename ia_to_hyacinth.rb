@@ -13,7 +13,7 @@ IA_IDENTIFIER_SUFFIX = '_\d\d\d'
 MARC_FILE_URL_PREFIX = 'https://clio.columbia.edu/catalog/'
 MARC_FILE_URL_SUFFIX = '.marc'
 
-OCLC_JSON_PREFIX = 'https://clio.columbia.edu/catalog.json?q=(OCoLC)ocm'
+OCLC_JSON_PREFIX = 'https://clio.columbia.edu/catalog.json?q='
 
 PRINT_RECORD_IDENTIFIER_PREFIX = '(OCoLC)'
 
@@ -82,15 +82,15 @@ def get_print_record_oclc_id(record, primary_clio_id)
   oclc_id
 end
 
-# Takes in a print record oclc identifier and retuns its corresponding clio identifier.
-def get_print_record_clio_id(oclc_id, primary_clio_id)
-  puts OCLC_JSON_PREFIX + oclc_id
-  # TODO: fix the url (using ocm at the end or not)
-  search_results = JSON.parse get_file_at_url (OCLC_JSON_PREFIX + oclc_id)
+# Takes in a clio_id and returns the corresponding title, provided its oclc matches.
+def get_print_record_title(clio_id, print_record_oclc_id)
+  record = get_marc_record(clio_id)
+  title = record.fields('245')[0]['a'][/\[*(.*?)\]*\.*$/m, 1]
+  record.each_by_tag '035' do |field|
+    next unless field['a']
 
-  # TODO: Parse 'docs' subsection of json and find the entry that doesn't match primary_clio_id and lookup its marc file
-  pp search_results
-  -1
+    return title if field['a'] == PRINT_RECORD_IDENTIFIER_PREFIX + print_record_oclc_id
+  end
 end
 
 # Takes in a MARC::Record object and returns [print_record_clio_id, print_record_title] or [nil, nil]
@@ -98,12 +98,17 @@ def get_print_record(record, primary_clio_id)
   print_record_oclc_id = get_print_record_oclc_id record, primary_clio_id
   return [nil, nil] unless print_record_oclc_id
 
-  puts "\tfound print record with id #{print_record_oclc_id}"
   # Get MARC for print_record_clio_id, check that 035 $a matches.
-  print_record_clio_id = get_print_record_clio_id print_record_oclc_id, primary_clio_id
-  puts print_record_clio_id
-  # marc = get_marc_record(print_record_clio_id)
-  # puts marc
+  search_results = JSON.parse get_file_at_url (OCLC_JSON_PREFIX + print_record_oclc_id)
+
+  # TODO: Parse 'docs' subsection of json and find the entry that doesn't match primary_clio_id and lookup its marc file
+  search_results['response']['docs'].each do |entry|
+    if entry['id'] != primary_clio_id
+      title = get_print_record_title(entry['id'], print_record_oclc_id)
+      return [entry['id'], title] if title
+    end
+  end
+  raise UserError, "Print recrd MARC file for id #{primary_clio_id} malformed or missing."
 end
 
 # Takes in the ID of an Internet Archive entry and returns a hash containing:
@@ -116,11 +121,12 @@ def clio_record_from_id(clio_id)
   record = get_marc_record(clio_id)
   return nil unless record # Return if record lookup resulted in a 404.
 
-  primary_clio_id = record.fields('001')[0]
+  primary_clio_id = record.fields('001')[0].to_s[4..]
   # Extract the 245 $a subfield and strip off brackets.
   primary_record_title = record.fields('245')[0]['a'][/\[*(.*?)\]*\.*$/m, 1]
   puts primary_record_title
   print_record_clio_id, print_record_title = get_print_record record, primary_clio_id
+  puts "\tfound print record with clio_id #{print_record_clio_id}\n\t#{print_record_title}"
 
   { primary_clio_id: primary_clio_id, primary_record_title: primary_record_title,
     print_record_clio_id: print_record_clio_id, print_record_title: print_record_title }
