@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 require 'spec_helper'
-require 'ia_to_hyacinth'
+require 'csv_conversion'
 
-describe MARC_Parse do
-  let(:clio_record) {clio_record_from_id_helper('14734628')}
+describe 'MARC' do
+  let(:csv_converter) { CsvConverter.new }
+  let(:clio_record) {csv_converter.clio_record_from_id_helper('14734628')}
 
   describe 'marc parse' do
     it 'parses primary record' do
