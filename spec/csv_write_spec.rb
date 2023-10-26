@@ -1,7 +1,8 @@
 # frozen_string_literal: true
+
 require 'tempfile'
 require 'spec_helper'
-require 'csv_conversion'
+require 'ia_to_hyacinth'
 
 # TODO: Make file paths OS-portable.
 output_fname_prefix = 'tmp_hy'
@@ -9,10 +10,15 @@ output_extension = '.csv'
 
 describe 'CSV_Writing' do
   let(:csv_output_tempfile) { Tempfile.new([output_fname_prefix, output_extension]) }
-  let(:csv_converter) { CsvConverter.new }
+  let(:csv_converter) { IaToHyacinth::CsvConverter.new }
 
   before do
     csv_converter.convert_csv(fixture('Short.csv').path, csv_output_tempfile)
+  end
+
+  after do
+    # It's good practice to close (and unlink) a tempfile as soon as possible
+    csv_output_tempfile.close!
   end
 
   it 'writes the correct number of entries' do

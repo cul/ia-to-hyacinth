@@ -6,7 +6,7 @@ AllCops:
 
 Metrics/ClassLength:
   Exclude:
-    - lib/csv_conversion.rb
+    - lib/ia_to_hyacinth/csv_converter.rb
 
 RSpec/ExampleLength:
   Enabled: false
