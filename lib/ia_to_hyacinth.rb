@@ -132,7 +132,7 @@ def clio_record_from_id_helper(clio_id)
 end
 
 # Takes in the path to CSV containing Internet Archive records and returns a list of those ids.
-def get_clio_ids(csv_path)
+def get_clio_ids(csv_path, log)
   begin
     clio_ids = get_internet_archive_ids(csv_path)
   rescue StandardError => e
@@ -164,7 +164,7 @@ end
 # corresponding Hyacinth records to the specified output file.
 def convert_csv(internet_archive_file, output_file)
   log = Logger.new LOG_FILE_PATH
-  clio_ids = get_clio_ids internet_archive_file
+  clio_ids = get_clio_ids internet_archive_file, log
   JsonCsv.create_csv_for_json_records(output_file) do |csv_builder|
     clio_ids.each do |clio_id|
       hyacinth_record = clio_record_from_id clio_id, log
@@ -174,9 +174,9 @@ def convert_csv(internet_archive_file, output_file)
   end
 end
 
-# internet_archive_file = 'spec/test_files/MuslimWorldManuscripts.csv'
-# output_file = '../MuslimWorldManuscripts_hy.csv'
+internet_archive_file = 'spec/test_files/MuslimWorldManuscripts.csv'
+output_file = '../MuslimWorldManuscripts_hy.csv'
 
-internet_archive_file = 'spec/test_files/Short.csv'
-output_file = '../Short_hy.csv'
-convert_csv internet_archive_file, output_file
+# internet_archive_file = 'spec/test_files/Short.csv'
+# output_file = '../Short_hy.csv'
+# convert_csv internet_archive_file, output_file
