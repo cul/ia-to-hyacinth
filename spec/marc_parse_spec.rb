@@ -2,8 +2,9 @@
 require 'spec_helper'
 require 'ia_to_hyacinth'
 
-describe 'Marc Parse' do
-  let(:clio_record) { clio_record_from_id_helper('14734628') }
+describe 'MARC' do
+  let(:csv_converter) { IaToHyacinth::CsvConverter.new }
+  let(:clio_record) { csv_converter.clio_record_from_id_helper('14734628') }
 
   it 'parses primary record' do
     expect(clio_record['primary_clio_id']).to eq('14734628')

@@ -1,27 +1,32 @@
 # frozen_string_literal: true
+
+require 'tempfile'
 require 'spec_helper'
 require 'ia_to_hyacinth'
 
 # TODO: Make file paths OS-portable.
-input_filepath = 'spec/test_files/Short.csv'
-output_filepath = 'spec/test_files/tmp_hy.csv'
+output_fname_prefix = 'tmp_hy'
+output_extension = '.csv'
 
-describe 'CSV Write' do
-  let(:tempfile) { File.open(output_filepath) }
+describe 'CSV_Writing' do
+  let(:csv_output_tempfile) { Tempfile.new([output_fname_prefix, output_extension]) }
+  let(:csv_converter) { IaToHyacinth::CsvConverter.new }
 
-  convert_csv input_filepath, output_filepath
+  before do
+    csv_converter.convert_csv(fixture('Short.csv').path, csv_output_tempfile)
+  end
 
-  after(:all) do
-    # Clean up temporary file
-    File.delete(output_filepath)
+  after do
+    # It's good practice to close (and unlink) a tempfile as soon as possible
+    csv_output_tempfile.close!
   end
 
   it 'writes the correct number of entries' do
-    expect(tempfile.read.count("\n")).to eq(4)
+    expect(csv_output_tempfile.read.count("\n")).to eq(4)
   end
 
   it 'writes the proper values in an entry' do
-    JsonCsv.csv_file_to_hierarchical_json_hash(output_filepath) do |json_hash_for_row, csv_row_number|
+    JsonCsv.csv_file_to_hierarchical_json_hash(csv_output_tempfile.path) do |json_hash_for_row, csv_row_number|
       if csv_row_number == 3
         expect(json_hash_for_row['primary_clio_id']).to eq('14678094')
         expect(json_hash_for_row['primary_record_title']).to eq('Collection of Sufi writings and prayers')

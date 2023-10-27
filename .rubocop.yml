@@ -2,4 +2,11 @@ inherit_gem:
   rubocul: rubocul_default.yml
 
 AllCops:
-  TargetRubyVersion: 3.1.4 
+  TargetRubyVersion: 3.1.4
+
+Metrics/ClassLength:
+  Exclude:
+    - lib/ia_to_hyacinth/csv_converter.rb
+
+RSpec/ExampleLength:
+  Enabled: false
