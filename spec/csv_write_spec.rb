@@ -22,10 +22,10 @@ describe 'CSV_Writing' do
   end
 
   it 'writes the correct number of entries' do
-    expect(csv_output_tempfile.foreach(filename).inject(0) { |c, _| c + 1 }).to eq(4)
+    expect(csv_output_tempfile.read.count("\n")).to eq(4)
   end
 
-  it 'wrote the proper values in an entry' do
+  it 'writes the proper values in an entry' do
     JsonCsv.csv_file_to_hierarchical_json_hash(csv_output_tempfile.path) do |json_hash_for_row, csv_row_number|
       if csv_row_number == 3
         expect(json_hash_for_row['primary_clio_id']).to eq('14678094')
