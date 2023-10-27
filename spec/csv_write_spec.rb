@@ -4,15 +4,12 @@ require 'ia_to_hyacinth'
 
 # TODO: Make file paths OS-portable.
 input_filepath = 'spec/test_files/Short.csv'
-output_dir = 'spec/test_files'
-output_fname = 'tmp_hy'
-output_extension = 'csv'
-output_filepath = "#{output_dir}/#{output_fname}.#{output_extension}"
+output_filepath = 'spec/test_files/tmp_hy.csv'
 
 describe 'CSV Write' do
-  let(:tempfile) { File.open("#{output_dir}/#{output_fname}.#{output_extension}") }
+  let(:tempfile) { File.open(output_filepath) }
 
-  convert_csv input_filepath, "#{output_dir}/#{output_fname}.csv"
+  convert_csv input_filepath, output_filepath
 
   after(:all) do
     # Clean up temporary file
